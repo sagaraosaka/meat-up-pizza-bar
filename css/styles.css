@@ -62,6 +62,7 @@
     color: var(--color-text);
     background-color: var(--color-bg);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; /* スマホで横スクロールを防ぐ */
   }
   
   img {
@@ -91,10 +92,7 @@
     font-weight: 500;
   }
   
-  /* スマホで横スクロールを防ぐ */
-  body {
-    overflow-x: hidden;
-  }
+
   
   /* =========================
      共通レイアウト
@@ -165,9 +163,6 @@
   @media (min-width: 768px) {
     .global-nav {
       display: flex;
-    }
-    section{
-        padding: 3.5rem 0;    
     }
   }
   
@@ -391,17 +386,6 @@
     color: var(--color-text);
   }
   
-/* ドリンクセクションのレイアウトを少し調整する */
-  @media (min-width: 768px) {
-    .drink-list {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  
-    .drink-item {
-      flex: 1 1 calc(50% - var(--space-md));
-    }
-  }
 
   /* =========================
      SCENE
@@ -560,7 +544,7 @@
     }
   
     section {
-      padding: calc(var(--space-xl) * 1.2) 0;
+      padding: 3rem 0; 
     }
   
     .menu-list {
