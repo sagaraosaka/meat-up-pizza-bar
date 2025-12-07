@@ -43,4 +43,40 @@ document.addEventListener("DOMContentLoaded", () => {
       yearEl.textContent = new Date().getFullYear();
     }
   });
-  
+
+// =========================
+// モバイルナビ（ハンバーガー）
+// =========================
+const navToggle = document.querySelector(".nav-toggle");
+const globalNav = document.querySelector("#global-nav");
+
+if (navToggle && globalNav) {
+  // ハンバーガーボタンを押したとき
+  navToggle.addEventListener("click", () => {
+    const isOpen = document.body.classList.toggle("nav-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  // メニュー内リンクを押したら閉じる
+  const navLinks = globalNav.querySelectorAll("a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth < 768 && document.body.classList.contains("nav-open")) {
+        document.body.classList.remove("nav-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+
+  // ★ 黒い部分（文字以外）をタップしたら閉じる
+  globalNav.addEventListener("click", (event) => {
+    // PC幅では何もしない
+    if (window.innerWidth >= 768) return;
+
+    // クリックされた場所がリンク(a)の中「ではない」なら閉じる
+    if (!event.target.closest("a") && document.body.classList.contains("nav-open")) {
+      document.body.classList.remove("nav-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}

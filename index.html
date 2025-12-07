@@ -23,18 +23,33 @@
     <div class="hero-inner fade-in is-visible">
     <!-- ここからナビ -->
     <div class="site-header">
-        <div class="logo-area">
-          <p class="logo-en">MEET UP</p>
-          <p class="logo-ja">ミート アップ</p>
-        </div>
-        <nav class="global-nav">
-          <a href="#about">About</a>
-          <a href="#pizza">Menu</a>
-          <a href="#drink">Drink</a>
-          <a href="#access">Access</a>
-          <a href="#sns">Instagram</a>
-        </nav>
+      <div class="logo-area">
+        <p class="logo-en">MEET UP</p>
+        <p class="logo-ja">ミート アップ</p>
       </div>
+    
+      <!-- ハンバーガーメニュー（モバイル用） -->
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-label="メニューを開く"
+        aria-controls="global-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    
+      <!-- PC・モバイル共通のナビ（表示方法だけCSSで切り替え） -->
+      <nav class="global-nav" id="global-nav">
+        <a href="#about">About</a>
+        <a href="#pizza">Menu</a>
+        <a href="#drink">Drink</a>
+        <a href="#access">Access</a>
+        <a href="#sns">Instagram</a>
+      </nav>
+    </div>    
       <!-- ここまでナビ -->
   
       <!-- ここから元のヒーロー本文 -->
@@ -99,7 +114,7 @@
         <div class="menu-list">
             <article class="menu-item">
               <figure class="menu-thumb">
-                <img src="img/pizza-margherita.jpg" alt="マルゲリータのピザ" />
+                <img src="img/pizza-margherita.jpg" alt="マルゲリータのピザ" loading="lazy" decoding="async" />
               </figure>
               <div class="menu-body">
                 <h4 class="menu-name">マルゲリータピザ</h4>
@@ -111,7 +126,7 @@
           
             <article class="menu-item">
               <figure class="menu-thumb">
-                <img src="img/pizza-teriyaki-chicken.jpg" alt="てりやきチキンのピザ" />
+                <img src="img/pizza-teriyaki-chicken.jpg" alt="てりやきチキンのピザ" loading="lazy" decoding="async" />
               </figure>
               <div class="menu-body">
                 <h4 class="menu-name">てりやきチキンのピザ</h4>
@@ -123,7 +138,7 @@
           
             <article class="menu-item">
               <figure class="menu-thumb">
-                <img src="img/pizza-quattro-formaggi.jpg" alt="クアトロフォルマッジのピザ" />
+                <img src="img/pizza-quattro-formaggi.jpg" alt="クアトロフォルマッジのピザ" loading="lazy" decoding="async" />
               </figure>
               <div class="menu-body">
                 <h4 class="menu-name">クアトロフォルマッジ</h4>
