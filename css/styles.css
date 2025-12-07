@@ -480,6 +480,12 @@
   .footer-inner {
     text-align: center;
   }
+
+  .footer-copy {
+    margin-bottom: var(--space-xs);
+    font-size: 0.8rem;
+    color: var(--color-muted);
+  }
   
   footer small {
     font-size: 0.75rem;
