@@ -67,18 +67,43 @@ if (navToggle && globalNav) {
       }
     });
   });
-
-  // ★ 黒い部分（文字以外）をタップしたら閉じる
-  globalNav.addEventListener("click", (event) => {
-    // メニューが開いていないなら何もしない
-    if (!document.body.classList.contains("nav-open")) return;
-
-    // リンク(a)を押した時は、既存の「リンクで閉じる」処理に任せる
-    if (event.target.closest("a")) return;
-
-    // リンク以外（背景）を押したら閉じる
+  const closeNav = () => {
     document.body.classList.remove("nav-open");
     navToggle.setAttribute("aria-expanded", "false");
-  });
+  };
+  
+
+// // ★ 黒くない部分（ヘッダーなど）をタップしても閉じる（外側クリック）
+// document.addEventListener("click", (event) => {
+//   // メニューが開いていないなら何もしない
+//   if (!document.body.classList.contains("nav-open")) return;
+
+//   // ハンバーガーボタン自身を押した時はトグル処理に任せる
+//   if (event.target.closest(".nav-toggle")) return;
+
+//   // モーダル（global-nav）内を押した時は、globalNav側の処理に任せる
+//   if (event.target.closest("#global-nav")) return;
+
+//   // それ以外（= 黒くないところ含む）を押したら閉じる
+//   closeNav();
+// });
+  // ★ どこをタップしても（リンク以外なら）閉じる：黒背景もヘッダーもOK
+  document.addEventListener(
+    "click",
+    (event) => {
+      if (!document.body.classList.contains("nav-open")) return;
+
+      // ハンバーガー自身はトグルに任せる
+      if (event.target.closest(".nav-toggle")) return;
+
+      // メニューリンクを押した時はスクロール＋閉じる処理に任せる
+      if (event.target.closest("#global-nav a")) return;
+
+      // それ以外は全部閉じる（黒い背景／黒くない場所どちらも）
+      closeNav();
+    },
+    true // ← これが重要（キャプチャで確実に拾う）
+  );
+
 
 }
