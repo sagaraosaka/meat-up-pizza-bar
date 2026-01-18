@@ -70,13 +70,15 @@ if (navToggle && globalNav) {
 
   // ★ 黒い部分（文字以外）をタップしたら閉じる
   globalNav.addEventListener("click", (event) => {
-    // PC幅では何もしない
-    if (window.innerWidth >= 768) return;
+    // メニューが開いていないなら何もしない
+    if (!document.body.classList.contains("nav-open")) return;
 
-    // クリックされた場所がリンク(a)の中「ではない」なら閉じる
-    if (!event.target.closest("a") && document.body.classList.contains("nav-open")) {
-      document.body.classList.remove("nav-open");
-      navToggle.setAttribute("aria-expanded", "false");
-    }
+    // リンク(a)を押した時は、既存の「リンクで閉じる」処理に任せる
+    if (event.target.closest("a")) return;
+
+    // リンク以外（背景）を押したら閉じる
+    document.body.classList.remove("nav-open");
+    navToggle.setAttribute("aria-expanded", "false");
   });
+
 }
