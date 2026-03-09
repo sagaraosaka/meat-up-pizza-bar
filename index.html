@@ -24,7 +24,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@400;700;900&display=swap"
   rel="stylesheet"
 />
 
@@ -35,7 +35,7 @@
     <!-- ここからナビ -->
     <div class="site-header">
       <div class="logo-area">
-        <p class="logo-en">MEAT UP</p>
+        <p class="logo-en">MEAT<span class="logo-dot"> ·</span> UP</p>
         <p class="logo-ja">ミート アップ</p>
       </div>
     
@@ -64,18 +64,20 @@
       <!-- ここまでナビ -->
   
       <!-- ここから元のヒーロー本文 -->
+      <div class="hero-eyebrow hero-animate" data-delay="0">PIZZA BAR &mdash; WAKAYAMA</div>
       <h1 class="hero-title">
-        500円ピザと一杯で、<br />
-        帰る前にちょっとミートアップ。
+        <span class="hero-animate" data-delay="100">500円ピザと一杯で、</span><br />
+        <span class="hero-animate" data-delay="200">帰る前にちょっと</span><br />
+        <span class="hero-animate" data-delay="300"><span class="hero-accent">ミートアップ。</span></span>
       </h1>
 
-      <p class="hero-lead">
+      <p class="hero-lead hero-animate" data-delay="350">
         2軒目・3軒目にちょうどいい、小さなピザバーです。<br />
         一人でも、誰かとでも。<br />
         焼きたてのピザを一枚と、お好きな一杯をどうぞ。
       </p>
 
-      <div class="hero-actions">
+      <div class="hero-actions hero-animate" data-delay="500">
         <a href="#pizza" class="btn primary">メニューを見る</a>
         <a href="#access" class="btn secondary">場所を知る</a>
       </div>
@@ -120,7 +122,7 @@
           一人でも、みんなでも、まずは一枚からどうぞ。
         </p>
 
-        <h3 class="section-subtitle">ALL PIZZA 500yen</h3>
+        <div class="price-badge-wrap"><span class="price-badge">ALL ¥500</span></div>
 
         <div class="menu-list">
             <article class="menu-item">
@@ -128,6 +130,7 @@
                 <img src="img/pizza-margherita.jpg" alt="マルゲリータのピザ" loading="lazy" decoding="async" />
               </figure>
               <div class="menu-body">
+                <p class="menu-price">¥500</p>
                 <h4 class="menu-name">マルゲリータピザ</h4>
                 <p class="menu-desc">
                   トマトソースとモッツァレラ、バジルの定番ピザ。迷ったらまずはこれ。ビールにもワインにもよく合います。
@@ -140,6 +143,7 @@
                 <img src="img/pizza-teriyaki-chicken.jpg" alt="てりやきチキンのピザ" loading="lazy" decoding="async" />
               </figure>
               <div class="menu-body">
+                <p class="menu-price">¥500</p>
                 <h4 class="menu-name">てりやきチキンのピザ</h4>
                 <p class="menu-desc">
                   甘辛いてりやきソースに、チキンとマヨネーズ。香ばしい香りで、ハイボールやビールが進む一枚です。
@@ -152,6 +156,7 @@
                 <img src="img/pizza-quattro-formaggi.jpg" alt="クアトロフォルマッジのピザ" loading="lazy" decoding="async" />
               </figure>
               <div class="menu-body">
+                <p class="menu-price">¥500</p>
                 <h4 class="menu-name">クアトロフォルマッジ</h4>
                 <p class="menu-desc">
                   4種のチーズをのせた、塩気とコクのあるピザ。はちみつをかけて、ワインと一緒にどうぞ。
@@ -174,34 +179,34 @@
 
         <div class="drink-list">
           <article class="drink-item">
-            <h3 class="drink-category">ビール</h3>
+            <h3 class="drink-category">ビール<span class="drink-tag beer">BEER</span></h3>
             <p>
               よく冷えた生ビールを中心に、数種類のビールをご用意しています。<br />
-              生ビール <span class="price">500円〜</span>
+              生ビール <span class="price">¥500〜</span>
             </p>
           </article>
 
           <article class="drink-item">
-            <h3 class="drink-category">ハイボール</h3>
+            <h3 class="drink-category">ハイボール<span class="drink-tag whisky">HIGHBALL</span></h3>
             <p>
               すっきり飲める定番ハイボール。てりやきチキンのピザと相性ぴったりです。<br />
-              ハイボール <span class="price">500円〜</span>
+              ハイボール <span class="price">¥500〜</span>
             </p>
           </article>
 
           <article class="drink-item">
-            <h3 class="drink-category">ワイン</h3>
+            <h3 class="drink-category">ワイン<span class="drink-tag wine">WINE</span></h3>
             <p>
               グラスで気軽に頼める、赤・白のワインをご用意。クアトロフォルマッジと一緒にどうぞ。<br />
-              グラスワイン <span class="price">500円〜</span>
+              グラスワイン <span class="price">¥500〜</span>
             </p>
           </article>
 
           <article class="drink-item">
-            <h3 class="drink-category">ソフトドリンク</h3>
+            <h3 class="drink-category">ソフトドリンク<span class="drink-tag soft">SOFT</span></h3>
             <p>
               アルコールが苦手な方や、締めの一杯に。ノンアルコールカクテルもご相談ください。<br />
-              ソフトドリンク <span class="price">500円〜</span>
+              ソフトドリンク <span class="price">¥500〜</span>
             </p>
           </article>
         </div>
