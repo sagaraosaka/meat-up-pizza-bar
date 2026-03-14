@@ -145,6 +145,12 @@ section {
   color: var(--color-muted);
 }
 
+.section-note {
+  margin-bottom: var(--space-md);
+  color: var(--color-muted);
+  font-size: 0.9em;
+}
+
 /* =========================
    ヘッダー＆ナビ
 ========================= */
