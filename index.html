@@ -55,7 +55,9 @@
       <nav class="global-nav" id="global-nav">
         <a href="#about">About</a>
         <a href="#pizza">Menu</a>
+        <a href="#gallery">Gallery</a>
         <a href="#drink">Drink</a>
+        <a href="#faq">FAQ</a>
         <a href="#access">Access</a>
         <a href="#sns">Instagram</a>
       </nav>
@@ -64,21 +66,44 @@
   
       <!-- ここから元のヒーロー本文 -->
       <div class="hero-eyebrow hero-animate" data-delay="0">PIZZA BAR &mdash; WAKAYAMA</div>
+      <!-- BACKUP（変更前メインコピー 2026-03）
       <h1 class="hero-title">
         <span class="hero-animate" data-delay="100">500円ピザと一杯で、</span><br />
         <span class="hero-animate" data-delay="200">帰る前にちょっと</span><br />
         <span class="hero-animate" data-delay="300"><span class="hero-accent">ミートアップ。</span></span>
       </h1>
+      -->
+      <h1 class="hero-title">
+        <span class="hero-animate" data-delay="100">500円で、</span><br />
+        <span class="hero-animate" data-delay="200">このピザが</span><br />
+        <span class="hero-animate" data-delay="300"><span class="hero-accent">食べられる。</span></span>
+      </h1>
 
+      <!-- BACKUP（変更前サブコピー 2026-03）
       <p class="hero-lead hero-animate" data-delay="350">
         2軒目・3軒目にちょうどいい、小さなピザバーです。<br />
         一人でも、誰かとでも。<br />
         焼きたてのピザを一枚と、お好きな一杯をどうぞ。
       </p>
+      -->
+      <p class="hero-lead hero-animate" data-delay="350">
+        和歌山のカジュアルピザバー。直径23cmの本格ピザが、驚きの500円から。<br />
+        帰る前にちょっとミートアップ。
+      </p>
 
+      <!-- BACKUP（変更前CTAボタン 2026-03）
       <div class="hero-actions hero-animate" data-delay="500">
         <a href="#pizza" class="btn primary">メニューを見る</a>
         <a href="#access" class="btn secondary">場所を知る</a>
+      </div>
+      -->
+      <div class="hero-cta hero-animate" data-delay="500">
+        <!-- BACKUP（変更前 href="#pizza" 2026-03） -->
+        <!-- BACKUP（変更前テキスト「席を予約する」2026-03） -->
+        <a href="https://tabelog.com/wakayama/A3001/A300101/30009101/" class="btn-primary" target="_blank" rel="noopener noreferrer">食べログで予約する</a>
+        <p class="reserve-note">食べログの予約ページへ移動します</p>
+        <a href="#pizza" class="btn-secondary">メニューを見る</a>
+        <p class="hero-cta-note">予約なしでもOK・当日歓迎</p>
       </div>
     </div>
   </header>
@@ -168,6 +193,28 @@
       </div>
     </section>
 
+    <!-- GALLERY（追加 2026-03） -->
+    <section id="gallery">
+      <div class="section-inner fade-in">
+        <h2 class="section-title">GALLERY</h2>
+        <p class="section-lead">カジュアルだけど、ちゃんとおしゃれ。</p>
+
+        <div class="gallery-inner">
+          <img
+            src="img/gallery-staff.jpg"
+            alt="meat upのスタッフと店内の雰囲気"
+            class="gallery-img"
+            loading="lazy"
+            decoding="async"
+          />
+          <p class="gallery-body">
+            カウンター席もテーブル席も、どちらもゆっくり過ごせる空間です。<br />
+            バーって入りにくい、そんな気持ちはここでは不要です。
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- DRINK -->
     <section id="drink">
       <div class="section-inner fade-in fade-delay-2">
@@ -217,15 +264,33 @@
     <section id="scene">
       <div class="section-inner fade-in">
         <h2 class="section-title">SCENE</h2>
+        <!-- BACKUP（変更前リード文 2026-03）
         <p class="section-lead">
           ミート アップは、こんなときにちょうどいいバーです。
+        </p>
+        -->
+        <p class="section-lead">
+          1軒目でも、2軒目でも。どんな夜にも使える場所。
         </p>
 
         <div class="scene-list">
           <article class="scene-item">
             <h3 class="scene-title">2軒目・3軒目に</h3>
+            <!-- BACKUP（変更前本文 2026-03）
             <p>
               「もう一杯だけ」と言いながら、¥500 + taxのピザを一枚。気楽に寄れて、さっと帰れるバーです。
+            </p>
+            -->
+            <p>
+              「もう一杯だけ」と言いながら、¥500 + taxのピザを一枚。気楽に寄れて、ゆっくり過ごせるバーです。
+            </p>
+          </article>
+
+          <!-- 新シーン追加 2026-03 -->
+          <article class="scene-item">
+            <h3 class="scene-title">1軒目・仕事帰りに</h3>
+            <p>
+              今日もお疲れさまでした。仕事終わりにそのまま立ち寄れる、大人の1軒目として。ピザとビールで、ゆっくり一息つきましょう。
             </p>
           </article>
 
@@ -238,10 +303,87 @@
 
           <article class="scene-item">
             <h3 class="scene-title">デートの締めに</h3>
+            <!-- BACKUP（変更前本文 2026-03）
             <p>
               食事のあとや映画のあとに、落ち着いた空間で静かに話したいときに。
             </p>
+            -->
+            <p>
+              ちょっといい雰囲気の夜を、気軽に演出したいときに。1軒目のディナーでも、締めの一杯でも。
+            </p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 中間CTA（追加 2026-03） -->
+    <section id="cta-mid">
+      <div class="section-inner section-cta-mid fade-in">
+        <p class="cta-mid-main">気になったら、まず来てみてください。</p>
+        <p class="cta-mid-sub">
+          予約なしでも大丈夫。ふらっと来てもらえる気軽さが、このお店のスタイルです。<br />
+          （金・土の夜は混みやすいため、予約がおすすめです）
+        </p>
+        <!-- BACKUP（変更前 href="#access" 2026-03） -->
+        <!-- BACKUP（変更前テキスト「席を予約する」2026-03） -->
+        <a href="https://tabelog.com/wakayama/A3001/A300101/30009101/" class="btn-primary" target="_blank" rel="noopener noreferrer">食べログで予約する</a>
+        <p class="reserve-note">食べログの予約ページへ移動します</p>
+      </div>
+    </section>
+
+    <!-- FAQ（追加 2026-03） -->
+    <section id="faq">
+      <div class="section-inner fade-in">
+        <h2 class="section-title">FAQ</h2>
+        <p class="section-lead">よくあるご質問</p>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary class="faq-q">予約なしでも入れますか？</summary>
+            <p class="faq-a">はい、基本的に予約なしでもご来店いただけます。ただし、金・土曜の夜は混み合うことが多いため、事前のご予約をおすすめしています。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">チャージ料金とは何ですか？</summary>
+            <p class="faq-a">お席料として、お一人様500円＋税をいただいています。ピザ1枚（500円＋税）＋ドリンク1杯（500円＋税）＋チャージ（500円＋税）で、1人あたり1,500円＋税〜お楽しみいただけます。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">一人でも入りやすいですか？</summary>
+            <p class="faq-a">もちろんです。カウンター席もあるので、おひとりさまも大歓迎です。スタッフが気さくにお話しするので、一人でも居心地よく過ごせます。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">服装に決まりはありますか？</summary>
+            <p class="faq-a">ドレスコードは特にありません。仕事帰りのスーツでも、普段着でも、お気軽にお越しください。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">ピザだけ注文してもいいですか？</summary>
+            <p class="faq-a">もちろん大丈夫です。ピザだけのご注文でも、お飲み物だけのご利用でも、自由にお楽しみください。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">金・土はどのくらい待ちますか？</summary>
+            <p class="faq-a">混雑時は20〜30分お待ちいただく場合があります。週末はぜひ事前にご予約ください。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">子ども連れでも入れますか？</summary>
+            <p class="faq-a">当店はバーのため、大人のお客様を中心とした空間づくりをしています。お子様連れでのご来店はご遠慮いただいております。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">貸切はできますか？</summary>
+            <p class="faq-a">人数や日時によってご相談に応じています。まずはお電話またはInstagramのDMからご連絡ください。</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">駐車場はありますか？</summary>
+            <p class="faq-a">店舗専用の駐車場はありませんが、近隣にコインパーキングがあります。お酒を飲まれる場合はお車でのご来店はご遠慮ください。</p>
+          </details>
+
         </div>
       </div>
     </section>
@@ -364,5 +506,16 @@
     </script>
   </footer>
   <script src="js/main.js"></script>
+
+  <!-- 固定フッターCTA（スマホのみ表示 追加 2026-03） -->
+  <div class="fixed-cta" aria-label="予約・お電話">
+    <p class="fixed-cta-note">予約なしでもOK</p>
+    <div class="fixed-cta-buttons">
+      <!-- BACKUP（変更前 href="#pizza" 2026-03） -->
+      <!-- BACKUP（変更前テキスト「席を予約する」2026-03） -->
+      <a href="https://tabelog.com/wakayama/A3001/A300101/30009101/" class="fixed-cta-reserve" target="_blank" rel="noopener noreferrer">食べログで予約</a>
+      <a href="tel:0734883455" class="fixed-cta-tel">電話する</a>
+    </div>
+  </div>
 </body>
 </html>

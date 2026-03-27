@@ -940,3 +940,272 @@ footer small {
     font-size: 3.5rem;
   }
 }
+
+/* ===== HERO CTA（追加 2026-03）===== */
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  padding: 16px 40px;
+  border-radius: 2px;
+  text-decoration: none;
+  min-width: 200px;
+  text-align: center;
+  min-height: 52px;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  padding: 14px 40px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  text-decoration: none;
+  min-width: 200px;
+  text-align: center;
+  min-height: 52px;
+  transition: opacity 0.2s;
+}
+
+.btn-secondary:hover {
+  opacity: 0.75;
+}
+
+.hero-cta-note {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+/* ===== /HERO CTA ===== */
+
+/* ===== 固定フッターCTA（追加 2026-03）===== */
+.fixed-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .fixed-cta {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #111;
+    padding: 10px 16px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .fixed-cta-note {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .fixed-cta-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .fixed-cta-reserve {
+    display: block;
+    background: #fff;
+    color: #111;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    padding: 13px 8px;
+    border-radius: 2px;
+    text-decoration: none;
+    min-height: 44px;
+    letter-spacing: 0.04em;
+  }
+
+  .fixed-cta-tel {
+    display: block;
+    background: transparent;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    padding: 13px 8px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 2px;
+    text-decoration: none;
+    min-height: 44px;
+    letter-spacing: 0.04em;
+  }
+
+  body {
+    padding-bottom: 90px;
+  }
+}
+/* ===== /固定フッターCTA ===== */
+
+/* ===== FAQセクション（追加 2026-03）===== */
+.faq-list {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.faq-q {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 18px 40px 18px 0;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+}
+
+.faq-q::-webkit-details-marker {
+  display: none;
+}
+
+.faq-q::after {
+  content: '+';
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: 300;
+  font-family: 'DM Sans', sans-serif;
+  transition: transform 0.2s;
+}
+
+.faq-item[open] .faq-q::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-a {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  line-height: 1.85;
+  padding: 0 16px 20px 0;
+  opacity: 0.75;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 768px) {
+  .faq-q { font-size: 13px; padding: 16px 36px 16px 0; }
+  .faq-a { font-size: 12px; }
+}
+/* ===== /FAQセクション ===== */
+
+/* ===== ギャラリーセクション（追加 2026-03）===== */
+.gallery-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .gallery-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
+
+.gallery-img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+  opacity: 0.8;
+  letter-spacing: 0.03em;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .gallery-body { font-size: 13px; }
+}
+/* ===== /ギャラリーセクション ===== */
+
+/* ===== 中間CTA（追加 2026-03）===== */
+.section-cta-mid {
+  text-align: center;
+}
+
+.cta-mid-main {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.cta-mid-sub {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  line-height: 1.9;
+  opacity: 0.7;
+  margin-bottom: 32px;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 768px) {
+  .cta-mid-main { font-size: 17px; }
+  .cta-mid-sub  { font-size: 12px; }
+}
+/* ===== /中間CTA ===== */
+
+/* ===== 予約補助テキスト（追加 2026-03）===== */
+.reserve-note {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.04em;
+  margin-top: 6px;
+  text-align: center;
+}
+/* ===== /予約補助テキスト ===== */
