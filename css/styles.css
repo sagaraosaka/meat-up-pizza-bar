@@ -1225,3 +1225,119 @@ footer small {
   text-align: center;
 }
 /* ===== /予約補助テキスト ===== */
+
+
+/* ===== SEOキーワードテキスト（追加 2025）===== */
+.section-keyword {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  opacity: 0.6;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+/* ===== /SEOキーワードテキスト ===== */
+
+/* ===== 選ばれる理由セクション（追加 2025）===== */
+.reason-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .reason-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.reason-card {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.reason-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.reason-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+}
+
+.reason-body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  line-height: 1.85;
+  opacity: 0.75;
+  letter-spacing: 0.03em;
+}
+/* ===== /選ばれる理由セクション ===== */
+
+/* ===== ランチセクション（追加 2025）===== */
+.lunch-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 640px;
+  margin: 0 auto 32px;
+}
+
+@media (min-width: 768px) {
+  .lunch-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.lunch-card {
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 4px;
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.lunch-name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.lunch-contents {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  line-height: 1.85;
+  opacity: 0.75;
+  margin-bottom: 16px;
+}
+
+.lunch-price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.lunch-note {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  line-height: 1.9;
+  opacity: 0.6;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  letter-spacing: 0.03em;
+}
+/* ===== /ランチセクション ===== */
