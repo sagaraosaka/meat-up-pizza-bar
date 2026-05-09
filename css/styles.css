@@ -109,8 +109,14 @@ h4 {
 
 /* セクション共通の余白 */
 section {
-  padding: 2.5rem 0;
+  padding: 3.5rem 0;
   border-top: 1px solid var(--color-border);
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 5rem 0;
+  }
 }
 
 /* セクションタイトル */
@@ -1179,6 +1185,7 @@ footer small {
   opacity: 0.8;
   letter-spacing: 0.03em;
   margin-top: 16px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -1230,10 +1237,10 @@ footer small {
 /* ===== SEOキーワードテキスト（追加 2025）===== */
 .section-keyword {
   font-family: 'Noto Sans JP', sans-serif;
-  font-size: 13px;
-  opacity: 0.6;
+  font-size: 11px;
+  opacity: 0.4;
   letter-spacing: 0.04em;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   line-height: 1.6;
 }
 /* ===== /SEOキーワードテキスト ===== */
@@ -1255,7 +1262,10 @@ footer small {
 
 .reason-card {
   text-align: center;
-  padding: 24px 16px;
+  padding: 32px 20px;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
 }
 
 .reason-num {
@@ -1299,10 +1309,11 @@ footer small {
 }
 
 .lunch-card {
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 4px;
-  padding: 24px 20px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: var(--radius-md);
+  padding: 32px 20px;
   text-align: center;
+  background: var(--color-card);
 }
 
 .lunch-name {
@@ -1341,3 +1352,10 @@ footer small {
   letter-spacing: 0.03em;
 }
 /* ===== /ランチセクション ===== */
+
+/* ===== ABOUTアクセント強調（追加 2026-05）===== */
+.about-accent {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+/* ===== /ABOUTアクセント強調 ===== */
