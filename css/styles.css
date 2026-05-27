@@ -2,24 +2,35 @@
    基本設定・テーマ変数
 ========================= */
 
+/* ============================================
+   VINTAGE REDESIGN - カラーパレット
+   ============================================ */
 :root {
-  /* colors — 70s LIFE Magazine palette */
-  --color-bg: #140D06;
-  --color-bg-section: #1A1208;
-  --color-card: #201508;
-  --color-text: #EAD9B8;
-  --color-muted: #9A8870;
-  --color-border: #3A2C1A;
-  --color-accent: #C4782A;        /* pumpkin / burnt amber */
-  --color-accent-dark: #9A5E1A;   /* darker amber */
-  --color-gold: #B8952A;          /* mustard gold */
-  --color-accent-soft: rgba(196, 120, 42, 0.12);
+  /* VINTAGE REDESIGN 新変数 */
+  --color-base: #362E2B;
+  --color-sub: #D2B48C;
+  --font-heading-en: 'Playfair Display', serif;
+  --font-body-en: 'Open Sans', sans-serif;
+  --font-heading-ja: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --font-body-ja: 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
+
+  /* 既存変数リマップ */
+  --color-bg: #362E2B;
+  --color-bg-section: #3D3330;
+  --color-card: #2E2724;
+  --color-text: #F5DEB3;
+  --color-muted: #C4A882;
+  --color-border: #4A3C35;
+  --color-accent: #B22222;
+  --color-accent-dark: #8B1A1A;
+  --color-gold: #D2B48C;
+  --color-accent-soft: rgba(178, 34, 34, 0.12);
 
   /* typography */
   --font-display: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
-  --font-body: 'DM Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-base: 'DM Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Open Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-base: 'Open Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --font-size-base: 16px;
   --line-height-base: 1.7;
@@ -37,7 +48,7 @@
   --radius-md: 4px;
   --radius-lg: 8px;
   --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 8px 32px rgba(196, 120, 42, 0.20);
+  --shadow-glow: 0 8px 32px rgba(178, 34, 34, 0.22);
   --transition-fast: 0.2s ease-out;
 }
 
@@ -56,14 +67,18 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ============================================
+   VINTAGE REDESIGN - ベーススタイル
+   ============================================ */
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-base);
+  font-family: var(--font-body-ja);
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   color: var(--color-text);
-  background-color: var(--color-bg);
+  background-color: var(--color-base);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -72,6 +87,24 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  filter: sepia(0.3) contrast(1.15) brightness(0.9) saturate(0.85); /* VINTAGE REDESIGN */
+  transition: filter 0.4s ease;
+}
+
+img:hover {
+  filter: sepia(0.1) contrast(1.05) brightness(1.0) saturate(1.0); /* VINTAGE REDESIGN */
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading-en);
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+p, li {
+  font-family: var(--font-body-en);
+  letter-spacing: 0.05em;
+  color: var(--color-text);
 }
 
 a {
@@ -832,6 +865,87 @@ footer {
 footer small {
   font-size: 0.75rem;
   color: var(--color-muted);
+}
+
+/* ============================================
+   VINTAGE REDESIGN - ナビゲーション
+   ============================================ */
+nav a {
+  font-family: var(--font-heading-en);
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+}
+
+/* ============================================
+   VINTAGE REDESIGN - ボタン
+   ============================================ */
+.btn-vintage {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  border: 1px solid var(--color-sub);
+  border-radius: 3px;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-heading-en);
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-vintage:hover {
+  background-color: var(--color-sub);
+  color: var(--color-base);
+  text-decoration: none;
+}
+
+/* ============================================
+   VINTAGE REDESIGN - ヒーローセクション
+   ============================================ */
+.hero h1,
+#hero h1,
+header h1 {
+  font-family: var(--font-heading-en);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  color: var(--color-text);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================
+   VINTAGE REDESIGN - セクション区切り
+   ============================================ */
+hr {
+  border: none;
+  border-top: 1px dashed var(--color-sub);
+  opacity: 0.4;
+  margin: 3rem 0;
+}
+
+/* ============================================
+   VINTAGE REDESIGN - 価格表示
+   ============================================ */
+.price-original {
+  text-decoration: line-through;
+  opacity: 0.6;
+  font-size: 0.85em;
+  margin-right: 0.5em;
+  color: var(--color-text);
+}
+
+.price-highlight {
+  font-family: var(--font-heading-en);
+  font-size: 1.8em;
+  font-weight: 900;
+  color: var(--color-accent);
 }
 
 /* =========================
