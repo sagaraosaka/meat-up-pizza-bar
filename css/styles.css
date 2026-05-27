@@ -41,7 +41,7 @@
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2.5rem;
-  --space-xl: 6rem;
+  --space-xl: 8rem;
 
   /* effects */
   --radius-sm: 2px;
@@ -174,7 +174,7 @@ section::before {
   font-size: 0.72rem;
   letter-spacing: 0.3em;
   color: var(--color-gold);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.875rem;
   text-transform: uppercase;
   opacity: 0.85;
 }
@@ -187,7 +187,7 @@ section::before {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-text);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
   line-height: 1;
 }
 
@@ -586,7 +586,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 .menu-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: 2rem;
 }
 
 .menu-item {
@@ -1424,7 +1424,7 @@ hr {
 .reason-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
+  gap: 48px;
   max-width: 900px;
   margin: 0;
 }
@@ -1475,7 +1475,7 @@ hr {
 .lunch-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 28px;
   max-width: 640px;
   margin: 0 0 32px 0;
 }
