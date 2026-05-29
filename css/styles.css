@@ -10,7 +10,7 @@
   --color-base: #362E2B;
   --color-sub: #D2B48C;
   --font-heading-en: 'Playfair Display', serif;
-  --font-body-en: 'Open Sans', sans-serif;
+  --font-body-en: 'Noto Sans JP', sans-serif;
   --font-heading-ja: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
   --font-body-ja: 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
 
@@ -29,8 +29,8 @@
   /* typography */
   --font-display: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
-  --font-body: 'Open Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-base: 'Open Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-base: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --font-size-base: 16px;
   --line-height-base: 1.7;
@@ -881,24 +881,10 @@ nav a:hover {
    VINTAGE REDESIGN - ボタン
    ============================================ */
 .btn-vintage {
-  background-color: var(--color-accent);
-  color: var(--color-text);
-  border: 1px solid var(--color-sub);
-  border-radius: 3px;
-  padding: 0.75rem 2rem;
-  font-family: var(--font-heading-en);
-  letter-spacing: 0.08em;
+  border-radius: 0;
   cursor: pointer;
-  display: inline-block;
   text-decoration: none;
   text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-vintage:hover {
-  background-color: var(--color-sub);
-  color: var(--color-base);
-  text-decoration: none;
 }
 
 /* ============================================
@@ -1120,28 +1106,36 @@ hr {
   margin-top: 32px;
 }
 
+@keyframes reserve-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(178, 34, 34, 0); }
+  50%       { box-shadow: 0 0 18px 4px rgba(178, 34, 34, 0.55); }
+}
+
 .btn-primary {
   display: inline-block;
   background: var(--color-accent);
   color: #fff;
   font-family: var(--font-display);
-  font-size: 1rem;
-  letter-spacing: 0.15em;
+  font-size: 1.15rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 16px 40px;
+  padding: 20px 52px;
   border-radius: 0;
-  border: 1px solid var(--color-accent);
+  border: 2px solid var(--color-accent);
   text-decoration: none;
-  min-width: 200px;
+  min-width: 220px;
   text-align: center;
-  min-height: 52px;
-  transition: background 0.2s ease, color 0.2s ease;
+  min-height: 58px;
+  animation: reserve-glow 2.8s ease-in-out infinite;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-primary:hover {
   background: transparent;
   color: var(--color-accent);
   text-decoration: none;
+  animation: none;
+  box-shadow: none;
 }
 
 .btn-secondary {
@@ -1216,15 +1210,16 @@ hr {
     background: var(--color-accent);
     color: #fff;
     font-family: var(--font-display);
-    font-size: 13px;
+    font-size: 15px;
     text-align: center;
     padding: 13px 8px;
     border-radius: 0;
-    border: 1px solid var(--color-accent);
+    border: 2px solid var(--color-accent);
     text-decoration: none;
-    min-height: 44px;
-    letter-spacing: 0.12em;
+    min-height: 48px;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
+    animation: reserve-glow 2.8s ease-in-out infinite;
   }
 
   .fixed-cta-tel {
@@ -1287,7 +1282,7 @@ hr {
   transform: translateY(-50%);
   font-size: 20px;
   font-weight: 300;
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   transition: transform 0.2s;
 }
 
