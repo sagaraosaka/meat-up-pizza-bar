@@ -5,7 +5,7 @@
 
 ## デモ
 
-- GitHub Pages: https://sagaraosaka.github.io/meet-up-pizza-bar/
+- 公開URL: https://meatupwakayama.com/
 
 ## サイト概要
 
@@ -44,6 +44,7 @@
     ├─ hero.jpg       # ヒーロー画像
     ├─ pizza-*.jpg    # メニュー画像
     └─ ...            # その他画像
+```
 
 ## 制作範囲
 
