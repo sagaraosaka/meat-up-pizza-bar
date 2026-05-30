@@ -277,13 +277,6 @@ section::before {
   color: var(--color-accent);
 }
 
-.logo-ja {
-  font-size: 0.7rem;
-  color: var(--color-muted);
-  letter-spacing: 0.1em;
-  margin: 0;
-}
-
 /* ハンバーガーメニュー（モバイル） */
 .nav-toggle {
   display: inline-flex;
@@ -468,6 +461,10 @@ body.nav-open .nav-toggle span:nth-child(3) {
   white-space: nowrap;
 }
 
+.hero-title .hero-price-line {
+  white-space: normal;
+}
+
 .hero-accent {
   color: var(--color-accent);
   position: relative;
@@ -480,61 +477,6 @@ body.nav-open .nav-toggle span:nth-child(3) {
   margin-bottom: var(--space-lg);
   font-size: 0.9rem;
   max-width: 28rem;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-}
-
-/* =========================
-   ボタン
-========================= */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem 1.75rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid transparent;
-  font-family: var(--font-display);
-  font-size: 1rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color var(--transition-fast),
-    color var(--transition-fast), border-color var(--transition-fast),
-    transform var(--transition-fast), box-shadow var(--transition-fast);
-  text-decoration: none;
-  white-space: nowrap;
-  line-height: 1;
-}
-
-.btn.primary {
-  background-color: var(--color-accent);
-  color: #ffffff;
-  box-shadow: 0 4px 16px rgba(255, 92, 26, 0.4);
-}
-
-.btn.primary:hover {
-  background-color: var(--color-accent-dark);
-  text-decoration: none;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(255, 92, 26, 0.5);
-}
-
-.btn.secondary {
-  background-color: transparent;
-  color: var(--color-gold);
-  border-color: var(--color-gold);
-}
-
-.btn.secondary:hover {
-  background-color: rgba(247, 183, 49, 0.1);
-  text-decoration: none;
-  transform: translateY(-2px);
 }
 
 /* =========================
@@ -880,9 +822,9 @@ footer small {
   color: var(--color-muted);
 }
 
-/* ============================================
-   VINTAGE REDESIGN - ナビゲーション
-   ============================================ */
+/* =========================
+   ナビゲーション共通
+========================= */
 nav a {
   font-family: var(--font-heading-en);
   letter-spacing: 0.1em;
@@ -895,9 +837,9 @@ nav a:hover {
   color: var(--color-accent);
 }
 
-/* ============================================
-   VINTAGE REDESIGN - ボタン
-   ============================================ */
+/* =========================
+   ボタン共通
+========================= */
 .btn-vintage {
   border-radius: 0;
   cursor: pointer;
@@ -905,9 +847,9 @@ nav a:hover {
   text-align: center;
 }
 
-/* ============================================
-   VINTAGE REDESIGN - ヒーローセクション
-   ============================================ */
+/* =========================
+   ヒーロー見出し上書き
+========================= */
 .hero h1,
 #hero h1,
 header h1 {
@@ -919,9 +861,9 @@ header h1 {
   letter-spacing: 0.02em;
 }
 
-/* ============================================
-   VINTAGE REDESIGN - セクション区切り
-   ============================================ */
+/* =========================
+   セクション区切り
+========================= */
 hr {
   border: none;
   border-top: 1px dashed var(--color-sub);
@@ -929,17 +871,9 @@ hr {
   margin: 3rem 0;
 }
 
-/* ============================================
-   VINTAGE REDESIGN - 価格表示
-   ============================================ */
-.price-original {
-  text-decoration: line-through;
-  opacity: 0.6;
-  font-size: 0.85em;
-  margin-right: 0.5em;
-  color: var(--color-text);
-}
-
+/* =========================
+   価格表示
+========================= */
 .price-highlight {
   font-family: var(--font-heading-en);
   font-size: 1.8em;
@@ -971,10 +905,6 @@ hr {
 
 .fade-delay-2 {
   transition-delay: 0.1s;
-}
-
-.fade-delay-3 {
-  transition-delay: 0.15s;
 }
 
 /* ヒーローアニメーション */
