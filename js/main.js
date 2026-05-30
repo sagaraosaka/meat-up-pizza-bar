@@ -80,6 +80,7 @@ if (navToggle && globalNav) {
   navToggle.addEventListener("click", () => {
     const isOpen = document.body.classList.toggle("nav-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
   });
 
   const navLinks = globalNav.querySelectorAll("a");
@@ -95,7 +96,15 @@ if (navToggle && globalNav) {
   const closeNav = () => {
     document.body.classList.remove("nav-open");
     navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "メニューを開く");
   };
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && document.body.classList.contains("nav-open")) {
+      closeNav();
+      navToggle.focus();
+    }
+  });
 
   document.addEventListener(
     "click",
