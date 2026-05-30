@@ -391,7 +391,14 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
 #hero {
   padding: var(--space-lg) 0 var(--space-xl);
-  background: url("../img/hero-bar-counter.jpg") center center / cover no-repeat;
+  background-image: url("../img/hero-bar-counter.jpg");
+  background-image: image-set(
+    url("../img/hero-bar-counter.webp") type("image/webp"),
+    url("../img/hero-bar-counter.jpg") type("image/jpeg")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #ffffff;
   position: relative;
   min-height: 100svh;
@@ -634,6 +641,12 @@ body.nav-open .nav-toggle span:nth-child(3) {
   object-fit: cover;
   filter: contrast(1.12) saturate(1.25) brightness(0.9);
   transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.menu-thumb picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .menu-item:hover .menu-thumb img {
@@ -1313,6 +1326,10 @@ hr {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
+}
+
+.gallery-grid picture {
+  display: block;
 }
 
 @media (min-width: 768px) {
