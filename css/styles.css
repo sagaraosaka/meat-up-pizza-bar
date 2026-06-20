@@ -479,6 +479,24 @@ body.nav-open .nav-toggle span:nth-child(3) {
   max-width: 28rem;
 }
 
+.hero-lead-en {
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.75rem;
+  margin-top: -0.75rem;
+  margin-bottom: var(--space-lg);
+  max-width: 28rem;
+  letter-spacing: 0.02em;
+}
+
+.shop-info-en {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-muted, #888);
+  margin-top: 0.25rem;
+  letter-spacing: 0.02em;
+}
+
 /* =========================
    PIZZA / DRINK / SCENE 共通
 ========================= */
