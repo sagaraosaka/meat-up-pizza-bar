@@ -1,0 +1,27 @@
+{
+  "name": "meatup",
+  "version": "1.0.0",
+  "description": "和歌山市本町のピザバー「Meat Up（ミートアップ）」の公式シングルページサイトです。   500円（税込550円）ピザ、平日ランチ、ディナー営業、予約導線、店舗情報、アクセスを1ページで確認できる構成にしています。",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint js/",
+    "lint:fix": "eslint js/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagaraosaka/meat-up-pizza-bar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/sagaraosaka/meat-up-pizza-bar/issues"
+  },
+  "homepage": "https://github.com/sagaraosaka/meat-up-pizza-bar#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.7.0",
+    "globals": "^17.7.0"
+  }
+}
