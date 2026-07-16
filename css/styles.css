@@ -1585,6 +1585,340 @@ hr {
 }
 /* ===== /ギャラリー個別フェードイン ===== */
 
+/* ===== パーティー・宴会ページ共通コンポーネント（追加 2026-07）===== */
+
+/* --- サブページ用コンパクトヒーロー --- */
+.page-hero {
+  position: relative;
+  min-height: 62svh;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  overflow: hidden;
+  isolation: isolate;
+  padding: var(--space-lg) 0;
+}
+
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(20, 10, 2, 0.84) 0%,
+    rgba(15, 8, 2, 0.68) 55%,
+    rgba(20, 10, 2, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.page-hero .hero-inner {
+  padding-top: 7rem;
+  padding-bottom: var(--space-lg);
+  min-height: unset;
+}
+
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  margin: 0 0 var(--space-md);
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .page-hero-title { font-size: 3.2rem; }
+}
+
+.page-hero-lead {
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  max-width: 36rem;
+  margin-bottom: var(--space-lg);
+}
+
+/* --- パンくず --- */
+.breadcrumb {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--color-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.breadcrumb a {
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+
+/* --- プランカード --- */
+.plan-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .plan-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.plan-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  padding: var(--space-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.plan-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin: 0 0 0.3rem;
+}
+
+.plan-name {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 0 0 var(--space-xs);
+  color: var(--color-text);
+}
+
+.plan-price {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--color-accent);
+  line-height: 1.1;
+  margin: 0 0 0.2rem;
+}
+
+.plan-price small {
+  font-size: 1rem;
+  color: var(--color-muted);
+}
+
+.plan-spec {
+  list-style: none;
+  margin: var(--space-sm) 0 0;
+  padding: 0;
+}
+
+.plan-spec li {
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--color-border);
+  font-size: 0.9rem;
+}
+
+.plan-spec li:last-child {
+  border-bottom: none;
+}
+
+.plan-note {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-top: var(--space-sm);
+  line-height: 1.8;
+}
+
+/* --- チップリスト（設備・利用シーン・ポイント） --- */
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: var(--space-md) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text);
+  letter-spacing: 0.03em;
+}
+
+.chip-accent {
+  border-color: var(--color-accent);
+  color: var(--color-gold);
+}
+
+/* --- 対応人数カード --- */
+.capacity-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .capacity-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.capacity-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.capacity-num {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--color-accent);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.capacity-label {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 0.3rem 0 0;
+}
+
+/* --- 当日までの流れ --- */
+.flow-steps {
+  list-style: none;
+  counter-reset: flow;
+  margin: var(--space-lg) 0 0;
+  padding: 0;
+  max-width: 640px;
+}
+
+.flow-steps li {
+  counter-increment: flow;
+  position: relative;
+  padding: 0 0 var(--space-md) 3.2rem;
+}
+
+.flow-steps li::before {
+  content: counter(flow, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-steps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 1.2rem;
+  top: 2.6rem;
+  bottom: 0.2rem;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.flow-title {
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+  color: var(--color-text);
+}
+
+.flow-desc {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+/* --- CTAバナー --- */
+.cta-banner {
+  text-align: center;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-accent);
+  padding: var(--space-lg) var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.cta-banner-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 0 0 var(--space-xs);
+}
+
+.cta-banner-sub {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 0 0 var(--space-md);
+}
+
+.cta-banner-tel {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  text-decoration: none;
+  margin-bottom: var(--space-sm);
+}
+
+.cta-banner-tel:hover {
+  color: var(--color-gold);
+}
+
+.cta-banner-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .cta-banner-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.cta-banner-note {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-top: var(--space-sm);
+}
+
+/* --- トップのPARTYセクション用 --- */
+.party-cta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .party-cta-row { flex-direction: row; }
+}
+/* ===== /パーティー・宴会ページ共通コンポーネント ===== */
+
 /* ===== prefers-reduced-motion ===== */
 @media (prefers-reduced-motion: reduce) {
   .hero-bg {
@@ -1614,6 +1948,10 @@ hr {
   }
   .menu-price {
     transition: none !important;
+  }
+  .plan-card {
+    transition: none !important;
+    transform: none !important;
   }
 }
 /* ===== /prefers-reduced-motion ===== */
