@@ -13,6 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (prefersReducedMotion || !("IntersectionObserver" in window)) {
     fadeEls.forEach((el) => el.classList.add("is-visible"));
+
+    // ギャラリー：即表示
+    document.querySelectorAll(".gallery-grid picture").forEach((pic) => {
+      pic.classList.add("gallery-fade", "is-visible");
+    });
   } else {
     const observer = new IntersectionObserver(
       (entries, obs) => {
@@ -26,6 +31,13 @@ document.addEventListener("DOMContentLoaded", () => {
       { threshold: 0.12 }
     );
     fadeEls.forEach((el) => observer.observe(el));
+
+    // ギャラリー画像のスタガーフェードイン
+    document.querySelectorAll(".gallery-grid picture").forEach((pic, i) => {
+      pic.classList.add("gallery-fade");
+      pic.style.setProperty("--stagger-delay", `${i * 120}ms`);
+      observer.observe(pic);
+    });
   }
 
   // =========================

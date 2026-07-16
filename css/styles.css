@@ -384,6 +384,18 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
 #hero {
   padding: var(--space-lg) 0 var(--space-xl);
+  color: #ffffff;
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
   background-image: url("../img/hero-bar-counter.jpg");
   background-image: image-set(
     url("../img/hero-bar-counter.webp") type("image/webp"),
@@ -392,11 +404,19 @@ body.nav-open .nav-toggle span:nth-child(3) {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #ffffff;
-  position: relative;
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
+  z-index: 0;
+  transform-origin: center;
+  will-change: transform;
+  animation: heroZoom 10s ease-out forwards;
+}
+
+@media (max-width: 767px) {
+  .hero-bg { animation: none; }
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1); }
+  to   { transform: scale(1.04); }
 }
 
 #hero::before {
@@ -409,7 +429,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
     rgba(15, 8, 2, 0.65) 55%,
     rgba(20, 10, 2, 0.76) 100%
   );
-  z-index: 0;
+  z-index: 1;
 }
 
 /* グレイン質感のオーバーレイ */
@@ -420,13 +440,13 @@ body.nav-open .nav-toggle span:nth-child(3) {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
   background-size: 200px 200px;
   opacity: 0.28;
-  z-index: 0;
+  z-index: 2;
   pointer-events: none;
 }
 
 .hero-inner {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   padding-top: 6rem;
   padding-bottom: var(--space-xl);
   width: 100%;
@@ -559,13 +579,15 @@ body.nav-open .nav-toggle span:nth-child(3) {
   border-radius: 0;
   overflow: hidden;
   transition:
-    border-color var(--transition-fast),
-    box-shadow var(--transition-fast);
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .menu-item:hover {
   border-left-color: var(--color-accent);
   box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
 }
 
 .menu-thumb {
@@ -600,7 +622,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   height: 100%;
   object-fit: cover;
   filter: contrast(1.12) saturate(1.25) brightness(0.9);
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .menu-thumb picture {
@@ -610,7 +632,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 }
 
 .menu-item:hover .menu-thumb img {
-  transform: scale(1.04);
+  transform: scale(1.03);
   filter: contrast(1.05) saturate(1.15) brightness(0.97);
 }
 
@@ -634,6 +656,11 @@ body.nav-open .nav-toggle span:nth-child(3) {
   color: var(--color-accent);
   margin-bottom: 0.2rem;
   line-height: 1;
+  transition: letter-spacing 0.3s ease;
+}
+
+.menu-item:hover .menu-price {
+  letter-spacing: 0.09em;
 }
 
 .menu-desc {
@@ -947,10 +974,10 @@ hr {
 
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(24px);
   transition:
-    opacity 0.5s ease-out,
-    transform 0.5s ease-out;
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
   will-change: opacity, transform;
 }
 
@@ -1542,3 +1569,51 @@ hr {
   font-weight: 700;
 }
 /* ===== /ABOUTアクセント強調 ===== */
+
+/* ===== ギャラリー個別フェードイン ===== */
+.gallery-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease-out var(--stagger-delay, 0ms),
+    transform 0.6s ease-out var(--stagger-delay, 0ms);
+}
+
+.gallery-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ===== /ギャラリー個別フェードイン ===== */
+
+/* ===== prefers-reduced-motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg {
+    animation: none !important;
+  }
+  .hero-animate {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .fade-in {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .gallery-fade {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .menu-item {
+    transition: none !important;
+    transform: none !important;
+  }
+  .menu-thumb img {
+    transition: none !important;
+  }
+  .menu-price {
+    transition: none !important;
+  }
+}
+/* ===== /prefers-reduced-motion ===== */
