@@ -100,7 +100,13 @@
     <!-- ここからナビ -->
     <div class="site-header">
       <div class="logo-area">
-        <p class="logo-en">MEAT<span class="logo-dot"> ·</span> UP</p>
+        <a href="/" class="logo-link">
+          <picture>
+            <source srcset="/img/logo.webp" type="image/webp" />
+            <img src="/img/logo.png" alt="meat up - eating house" class="logo-img"
+                 width="600" height="210" loading="eager" decoding="async" />
+          </picture>
+        </a>
       </div>
     
       <!-- ハンバーガーメニュー（モバイル用） -->
@@ -686,6 +692,13 @@
 
   <footer>
     <div class="footer-inner">
+      <a href="/" class="footer-logo-link">
+        <picture>
+          <source srcset="/img/logo.webp" type="image/webp" />
+          <img src="/img/logo.png" alt="meat up - eating house" class="footer-logo"
+               width="600" height="210" loading="lazy" decoding="async" />
+        </picture>
+      </a>
       <p class="footer-copy">500円（税込550円）ピザと一杯で、今日もおつかれさま。</p>
       <small>&copy; <span id="js-year">2026</span> MEAT UP.</small>
 

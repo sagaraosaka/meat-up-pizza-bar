@@ -25,6 +25,7 @@
   --color-accent-dark: #8B1A1A;
   --color-gold: #D2B48C;
   --color-accent-soft: rgba(178, 34, 34, 0.12);
+  --color-logo-yellow: #FDB300; /* logo.pngからサンプリングした実測値 */
 
   /* typography */
   --font-display: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
@@ -275,6 +276,23 @@ section::before {
 
 .logo-en span.logo-dot {
   color: var(--color-accent);
+}
+
+.logo-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+.logo-link:focus-visible {
+  outline: 2px solid var(--color-logo-yellow);
+  outline-offset: 3px;
+}
+
+.logo-img {
+  display: block;
+  width: auto;
+  height: 34px;
+  border-radius: 6px;
 }
 
 /* ハンバーガーメニュー（モバイル） */
@@ -897,6 +915,18 @@ footer {
   text-align: center;
 }
 
+.footer-logo-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  display: block;
+  width: auto;
+  height: 32px;
+  border-radius: 5px;
+}
+
 .footer-copy,
 .footer-note {
   margin-bottom: var(--space-xs);
@@ -1015,6 +1045,16 @@ hr {
 @media (min-width: 768px) {
   .nav-toggle {
     display: none;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  /* ロゴ画像化に伴うヘッダー高さの微調整（nav-toggleが非表示になるデスクトップのみ） */
+  .site-header {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .global-nav {
