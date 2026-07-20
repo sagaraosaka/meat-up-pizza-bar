@@ -99,7 +99,7 @@
 <body>
   <header id="hero">
     <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-inner fade-in is-visible">
+    <div class="hero-inner">
     <!-- ここからナビ -->
     <div class="site-header">
       <div class="logo-area">
@@ -143,7 +143,7 @@
       <!-- ここから元のヒーロー本文 -->
       <div class="hero-eyebrow hero-animate" data-delay="0">PIZZA BAR &mdash; WAKAYAMA</div>
       <h1 class="hero-title">
-        <span class="hero-animate hero-price-line" data-delay="120">500円（税込550円）で、</span><br />
+        <span class="hero-animate hero-price-line" data-delay="120">500円<span style="white-space:nowrap">（税込550円）</span>で、</span><br />
         <span class="hero-animate" data-delay="240">このピザが</span><br />
         <span class="hero-animate" data-delay="360"><span class="hero-accent">食べられる。</span></span>
       </h1>
@@ -224,6 +224,13 @@
         </p>
       </div>
     </section>
+
+    <div class="full-bleed-band">
+      <picture>
+        <source srcset="img/gallery-backbar.webp" type="image/webp" />
+        <img src="img/gallery-backbar.jpg" alt="バックバーに並ぶボトル棚" width="4032" height="3024" loading="lazy" decoding="async" />
+      </picture>
+    </div>
 
     <!-- PIZZA -->
     <section id="pizza">
@@ -358,6 +365,13 @@
       </div>
     </section>
 
+    <div class="full-bleed-band">
+      <picture>
+        <source srcset="img/gallery-table.webp" type="image/webp" />
+        <img src="img/gallery-table.jpg" alt="テーブル席の様子" width="4032" height="3024" loading="lazy" decoding="async" />
+      </picture>
+    </div>
+
     <!-- PARTY（追加 2026-07） -->
     <section id="party">
       <div class="section-inner fade-in">
@@ -367,6 +381,11 @@
         <p class="section-keyword">
           3名様から利用できる飲み放題付きプランをご用意しています。飲み会後の二次会はもちろん、会社宴会、結婚式二次会、少人数の貸切パーティーなど、人数やご予算に合わせてお気軽にご相談ください。
         </p>
+
+        <div class="price-badge-wrap">
+          <span class="price-badge">飲み放題付き 二次会プラン ¥3,300（税込）／1名〜・宴会コース ¥6,600（税込）</span>
+        </div>
+        <p class="section-note">貸切のご相談も承ります（人数・ご予算に応じて）</p>
 
         <ul class="chip-list">
           <li class="chip chip-accent">3名から利用可能</li>

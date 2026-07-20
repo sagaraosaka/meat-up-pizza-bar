@@ -1,6 +1,9 @@
 .company/
 node_modules/
 CLAUDE.md
+scripts/
+screenshots/
+screenshots-v2/
 
 # OS generated files
 .DS_Store
