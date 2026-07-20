@@ -392,7 +392,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
 .global-nav a:hover {
   opacity: 1;
-  color: var(--color-accent);
+  color: var(--color-gold);
   text-decoration: none;
 }
 
@@ -475,7 +475,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-gold);
   margin-bottom: 0.75rem;
   font-weight: 500;
   display: inline-block;
@@ -504,7 +504,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 }
 
 .hero-accent {
-  color: var(--color-accent);
+  color: var(--color-gold);
   position: relative;
 }
 
@@ -671,7 +671,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   font-family: var(--font-display);
   font-size: 1.4rem;
   letter-spacing: 0.05em;
-  color: var(--color-accent);
+  color: var(--color-gold);
   margin-bottom: 0.2rem;
   line-height: 1;
   transition: letter-spacing 0.3s ease;
@@ -733,7 +733,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 }
 
 .drink-tag.beer   { background: rgba(184, 149, 42, 0.15); color: var(--color-gold); border: 1px solid var(--color-gold); }
-.drink-tag.whisky { background: rgba(196, 120, 42, 0.12); color: var(--color-accent); border: 1px solid var(--color-accent); }
+.drink-tag.whisky { background: rgba(196, 120, 42, 0.12); color: var(--color-gold); border: 1px solid var(--color-accent); }
 .drink-tag.wine   { background: rgba(160, 80, 120, 0.15); color: #d48ab0; border: 1px solid #d48ab0; }
 .drink-tag.soft   { background: rgba(100, 200, 200, 0.1); color: #7ecece; border: 1px solid #7ecece; }
 
@@ -747,7 +747,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   font-family: var(--font-display);
   font-size: 1.2rem;
   letter-spacing: 0.05em;
-  color: var(--color-accent);
+  color: var(--color-gold);
 }
 
 /* =========================
@@ -802,7 +802,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-gold);
   margin-bottom: 0.25rem;
 }
 
@@ -836,7 +836,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
 .map-link a {
   font-size: 0.9rem;
-  color: var(--color-accent);
+  color: var(--color-text);
   font-weight: 500;
 }
 
@@ -995,7 +995,7 @@ hr {
   font-family: var(--font-heading-en);
   font-size: 1.8em;
   font-weight: 900;
-  color: var(--color-accent);
+  color: var(--color-gold);
 }
 
 /* =========================
@@ -1207,7 +1207,7 @@ hr {
 
 .btn-primary:hover {
   background: transparent;
-  color: var(--color-accent);
+  color: var(--color-gold);
   text-decoration: none;
   animation: none;
   box-shadow: none;
@@ -1234,6 +1234,30 @@ hr {
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.08);
   opacity: 1;
+  text-decoration: none;
+}
+
+.btn-tertiary {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  border: 1px solid var(--color-gold);
+  border-radius: 0;
+  text-decoration: none;
+  min-width: 200px;
+  text-align: center;
+  min-height: 48px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-tertiary:hover {
+  background: var(--color-gold);
+  color: var(--color-base);
   text-decoration: none;
 }
 
@@ -1276,8 +1300,8 @@ hr {
 
   .fixed-cta-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
   }
 
   .fixed-cta-reserve {
@@ -1285,31 +1309,32 @@ hr {
     background: var(--color-accent);
     color: #fff;
     font-family: var(--font-display);
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
-    padding: 13px 8px;
+    padding: 13px 4px;
     border-radius: 0;
     border: 2px solid var(--color-accent);
     text-decoration: none;
     min-height: 48px;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     animation: reserve-glow 2.8s ease-in-out infinite;
   }
 
-  .fixed-cta-tel {
+  .fixed-cta-tel,
+  .fixed-cta-party {
     display: block;
     background: transparent;
     color: rgba(255, 255, 255, 0.85);
     font-family: var(--font-display);
-    font-size: 13px;
+    font-size: 11px;
     text-align: center;
-    padding: 13px 8px;
+    padding: 13px 4px;
     border: 1px solid rgba(255, 255, 255, 0.35);
     border-radius: 0;
     text-decoration: none;
     min-height: 44px;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
@@ -1523,7 +1548,7 @@ hr {
   line-height: 1;
   margin-bottom: 12px;
   letter-spacing: 0.02em;
-  color: var(--color-accent);
+  color: var(--color-gold);
 }
 
 .reason-title {
@@ -1588,7 +1613,7 @@ hr {
   font-size: 40px;
   letter-spacing: 0.02em;
   line-height: 1;
-  color: var(--color-accent);
+  color: var(--color-gold);
 }
 
 .lunch-note {
@@ -1605,7 +1630,7 @@ hr {
 
 /* ===== ABOUTアクセント強調（追加 2026-05）===== */
 .about-accent {
-  color: var(--color-accent);
+  color: var(--color-gold);
   font-weight: 700;
 }
 /* ===== /ABOUTアクセント強調 ===== */
@@ -1744,7 +1769,7 @@ hr {
 .plan-price {
   font-family: var(--font-display);
   font-size: 2.2rem;
-  color: var(--color-accent);
+  color: var(--color-gold);
   line-height: 1.1;
   margin: 0 0 0.2rem;
 }
@@ -1824,7 +1849,7 @@ hr {
 .capacity-num {
   font-family: var(--font-display);
   font-size: 2.4rem;
-  color: var(--color-accent);
+  color: var(--color-gold);
   line-height: 1.1;
   margin: 0;
 }
@@ -1857,7 +1882,7 @@ hr {
   top: 0;
   font-family: var(--font-display);
   font-size: 1.5rem;
-  color: var(--color-accent);
+  color: var(--color-gold);
   border: 1px solid var(--color-accent);
   width: 2.4rem;
   height: 2.4rem;
@@ -1887,6 +1912,32 @@ hr {
   color: var(--color-muted);
   margin: 0;
 }
+
+/* --- ヒーロー直下 宴会・貸切誘導バナー --- */
+.hero-party-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem var(--space-md);
+  background: var(--color-card);
+  border-top: 3px solid var(--color-accent);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.hero-party-banner:hover {
+  background: var(--color-bg-section);
+  color: var(--color-gold);
+  text-decoration: none;
+}
+/* --- /ヒーロー直下 宴会・貸切誘導バナー --- */
 
 /* --- CTAバナー --- */
 .cta-banner {
@@ -1949,6 +2000,7 @@ hr {
 .party-cta-row {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 0.75rem;
   align-items: flex-start;
   margin-top: var(--space-md);
