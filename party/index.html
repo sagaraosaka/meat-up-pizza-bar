@@ -24,6 +24,9 @@
 
   <link rel="icon" href="/favicon.ico">
 
+  <!-- ヒーロー背景画像の優先読み込み（LCP対策） -->
+  <link rel="preload" as="image" href="/img/hero-bar-counter.webp" type="image/webp" fetchpriority="high">
+
   <link rel="stylesheet" href="/css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -343,19 +346,19 @@
           <div class="gallery-grid">
             <picture>
               <source srcset="/img/gallery-table.webp" type="image/webp" />
-              <img src="/img/gallery-table.jpg" alt="グループで囲めるテーブル席" class="gallery-img" loading="lazy" decoding="async" />
+              <img src="/img/gallery-table.jpg" alt="グループで囲めるテーブル席" class="gallery-img" width="4032" height="3024" loading="lazy" decoding="async" />
             </picture>
             <picture>
               <source srcset="/img/hero-bar-counter.webp" type="image/webp" />
-              <img src="/img/hero-bar-counter.jpg" alt="カウンター席と酒棚" class="gallery-img" loading="lazy" decoding="async" />
+              <img src="/img/hero-bar-counter.jpg" alt="カウンター席と酒棚" class="gallery-img" width="4032" height="3024" loading="lazy" decoding="async" />
             </picture>
             <picture>
               <source srcset="/img/gallery-staff.webp" type="image/webp" />
-              <img src="/img/gallery-staff.jpg" alt="meat upのスタッフと店内の雰囲気" class="gallery-img" loading="lazy" decoding="async" />
+              <img src="/img/gallery-staff.jpg" alt="meat upのスタッフと店内の雰囲気" class="gallery-img" width="1179" height="781" loading="lazy" decoding="async" />
             </picture>
             <picture>
               <source srcset="/img/gallery-backbar.webp" type="image/webp" />
-              <img src="/img/gallery-backbar.jpg" alt="バックバー正面" class="gallery-img" loading="lazy" decoding="async" />
+              <img src="/img/gallery-backbar.jpg" alt="バックバー正面" class="gallery-img" width="4032" height="3024" loading="lazy" decoding="async" />
             </picture>
           </div>
           <p class="gallery-body">
@@ -383,6 +386,8 @@
             class="access-exterior-img"
             src="/img/access-exterior.jpg"
             alt="meat up 外観・看板"
+            width="4032"
+            height="3024"
             loading="lazy"
             decoding="async"
           />

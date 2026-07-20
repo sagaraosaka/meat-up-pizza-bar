@@ -25,6 +25,9 @@
     <!-- favicon（ここに追加） -->
     <link rel="icon" href="favicon.ico">
 
+  <!-- ヒーロー背景画像の優先読み込み（LCP対策） -->
+  <link rel="preload" as="image" href="/img/hero-bar-counter.webp" type="image/webp" fetchpriority="high">
+
   <!-- 後でCSSファイルを読み込む想定 -->
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -128,8 +131,8 @@
         <a href="#pizza">Menu</a>
         <a href="#lunch">Lunch</a>
         <a href="#gallery">Gallery</a>
-        <a href="#drink">Drink</a>
         <a href="/party/">Party</a>
+        <a href="#drink">Drink</a>
         <a href="#faq">FAQ</a>
         <a href="#access">Access</a>
         <a href="#sns">Instagram</a>
@@ -242,7 +245,7 @@
               <figure class="menu-thumb">
                 <picture>
                   <source srcset="img/pizza-margherita-new.webp" type="image/webp" />
-                  <img src="img/pizza-margherita-new.jpg" alt="マルゲリータのピザ" loading="lazy" decoding="async" />
+                  <img src="img/pizza-margherita-new.jpg" alt="マルゲリータのピザ" width="3024" height="4032" loading="lazy" decoding="async" />
                 </picture>
               </figure>
               <div class="menu-body">
@@ -258,7 +261,7 @@
               <figure class="menu-thumb">
                 <picture>
                   <source srcset="img/pizza-teriyaki-chicken.webp" type="image/webp" />
-                  <img src="img/pizza-teriyaki-chicken.jpg" alt="てりやきチキンのピザ" loading="lazy" decoding="async" />
+                  <img src="img/pizza-teriyaki-chicken.jpg" alt="てりやきチキンのピザ" width="3936" height="2624" loading="lazy" decoding="async" />
                 </picture>
               </figure>
               <div class="menu-body">
@@ -274,7 +277,7 @@
               <figure class="menu-thumb">
                 <picture>
                   <source srcset="img/pizza-quattro-formaggi.webp" type="image/webp" />
-                  <img src="img/pizza-quattro-formaggi.jpg" alt="クアトロフォルマッジのピザ" loading="lazy" decoding="async" />
+                  <img src="img/pizza-quattro-formaggi.jpg" alt="クアトロフォルマッジのピザ" width="6000" height="4000" loading="lazy" decoding="async" />
                 </picture>
               </figure>
               <div class="menu-body">
@@ -332,19 +335,19 @@
           <div class="gallery-grid">
             <picture>
               <source srcset="img/gallery-staff.webp" type="image/webp" />
-              <img src="img/gallery-staff.jpg" alt="meat upのスタッフと店内の雰囲気" class="gallery-img" loading="lazy" decoding="async" />
+              <img src="img/gallery-staff.jpg" alt="meat upのスタッフと店内の雰囲気" class="gallery-img" width="1179" height="781" loading="lazy" decoding="async" />
             </picture>
             <picture>
               <source srcset="img/hero-bar-counter.webp" type="image/webp" />
-              <img src="img/hero-bar-counter.jpg" alt="カウンター席と酒棚" class="gallery-img" loading="lazy" decoding="async" />
+              <img src="img/hero-bar-counter.jpg" alt="カウンター席と酒棚" class="gallery-img" width="4032" height="3024" loading="lazy" decoding="async" />
             </picture>
             <picture>
               <source srcset="img/gallery-table.webp" type="image/webp" />
-              <img src="img/gallery-table.jpg" alt="テーブル席の様子" class="gallery-img" loading="lazy" decoding="async" />
+              <img src="img/gallery-table.jpg" alt="テーブル席の様子" class="gallery-img" width="4032" height="3024" loading="lazy" decoding="async" />
             </picture>
             <picture>
               <source srcset="img/gallery-backbar.webp" type="image/webp" />
-              <img src="img/gallery-backbar.jpg" alt="バックバー正面" class="gallery-img" loading="lazy" decoding="async" />
+              <img src="img/gallery-backbar.jpg" alt="バックバー正面" class="gallery-img" width="4032" height="3024" loading="lazy" decoding="async" />
             </picture>
           </div>
           <p class="gallery-body">
@@ -355,10 +358,40 @@
       </div>
     </section>
 
+    <!-- PARTY（追加 2026-07） -->
+    <section id="party">
+      <div class="section-inner fade-in">
+        <p class="section-kicker">— 06 —</p>
+        <h2 class="section-title">PARTY</h2>
+        <p class="section-lead">宴会・二次会・貸切パーティーにも</p>
+        <p class="section-keyword">
+          3名様から利用できる飲み放題付きプランをご用意しています。飲み会後の二次会はもちろん、会社宴会、結婚式二次会、少人数の貸切パーティーなど、人数やご予算に合わせてお気軽にご相談ください。
+        </p>
+
+        <ul class="chip-list">
+          <li class="chip chip-accent">3名から利用可能</li>
+          <li class="chip chip-accent">飲み放題付き</li>
+          <li class="chip">着席最大35名</li>
+          <li class="chip">立食最大50名</li>
+          <li class="chip">カラオケ</li>
+          <li class="chip">プロジェクター</li>
+          <li class="chip">ボードゲーム</li>
+          <li class="chip">貸切相談可</li>
+        </ul>
+
+        <div class="party-cta-row">
+          <a href="/party/" class="btn-primary btn-vintage">二次会・宴会プランを見る</a>
+          <a href="/wedding-after-party/" class="btn-secondary btn-vintage">結婚式二次会について相談する</a>
+          <a href="tel:0734883455" class="btn-tertiary btn-vintage">電話で相談する</a>
+          <a href="https://www.instagram.com/meatup_jp/" class="btn-tertiary btn-vintage" target="_blank" rel="noopener noreferrer">InstagramのDMで相談</a>
+        </div>
+      </div>
+    </section>
+
     <!-- DRINK -->
     <section id="drink">
       <div class="section-inner fade-in fade-delay-2">
-        <p class="section-kicker">— 06 —</p>
+        <p class="section-kicker">— 07 —</p>
         <h2 class="section-title">DRINK</h2>
         <p class="section-keyword">ビール、ワイン、カクテルなど、ピザに合わせやすいドリンクをそろえています。</p>
         <p class="section-lead">
@@ -406,7 +439,7 @@
     <!-- SCENE -->
     <section id="scene">
       <div class="section-inner fade-in">
-        <p class="section-kicker">— 07 —</p>
+        <p class="section-kicker">— 08 —</p>
         <h2 class="section-title">SCENE</h2>
         <p class="section-keyword">仕事帰りの一杯から2軒目利用まで、和歌山市中心部で気軽に立ち寄れるピザバーです。</p>
         <p class="section-lead">
@@ -417,7 +450,7 @@
           <article class="scene-item">
             <h3 class="scene-title">2軒目・3軒目に</h3>
             <p>
-              「もう一杯だけ」と言いながら、¥500（税込¥550）のピザを一枚。気楽に寄れて、ゆっくり過ごせるバーです。
+              「もう一杯だけ」と言いながら、¥500（税込¥550）のピザを一枚。気楽に寄れて、ゆっくり過ごせるバーです。ちょっといい雰囲気の夜の締めくくりにも使えます。
             </p>
           </article>
 
@@ -425,53 +458,9 @@
           <article class="scene-item">
             <h3 class="scene-title">1軒目・仕事帰りに</h3>
             <p>
-              今日もお疲れさまでした。仕事終わりにそのまま立ち寄れる、大人の1軒目として。ピザとビールで、ゆっくり一息つきましょう。
+              今日もお疲れさまでした。仕事終わりにそのまま立ち寄れる、大人の1軒目として。カウンターでおひとりさまがスマホを見ながらぼんやり過ごすのも歓迎、ピザとビールでゆっくり一息つきましょう。
             </p>
           </article>
-
-          <article class="scene-item">
-            <h3 class="scene-title">仕事帰りにひとりで</h3>
-            <p>
-              カウンターで、軽く一杯とピザを。スマホを見ながら、ぼんやり過ごす夜も悪くありません。
-            </p>
-          </article>
-
-          <article class="scene-item">
-            <h3 class="scene-title">デートの締めに</h3>
-            <p>
-              ちょっといい雰囲気の夜を、気軽に演出したいときに。1軒目のディナーでも、締めの一杯でも。
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PARTY（追加 2026-07） -->
-    <section id="party">
-      <div class="section-inner fade-in">
-        <p class="section-kicker">— 08 —</p>
-        <h2 class="section-title">PARTY</h2>
-        <p class="section-lead">宴会・二次会・貸切パーティーにも</p>
-        <p class="section-keyword">
-          3名様から利用できる飲み放題付きプランをご用意しています。飲み会後の二次会はもちろん、会社宴会、結婚式二次会、少人数の貸切パーティーなど、人数やご予算に合わせてお気軽にご相談ください。
-        </p>
-
-        <ul class="chip-list">
-          <li class="chip chip-accent">3名から利用可能</li>
-          <li class="chip chip-accent">飲み放題付き</li>
-          <li class="chip">着席最大35名</li>
-          <li class="chip">立食最大50名</li>
-          <li class="chip">カラオケ</li>
-          <li class="chip">プロジェクター</li>
-          <li class="chip">ボードゲーム</li>
-          <li class="chip">貸切相談可</li>
-        </ul>
-
-        <div class="party-cta-row">
-          <a href="/party/" class="btn-primary btn-vintage">二次会・宴会プランを見る</a>
-          <a href="/wedding-after-party/" class="btn-secondary btn-vintage">結婚式二次会について相談する</a>
-          <a href="tel:0734883455" class="btn-tertiary btn-vintage">電話で相談する</a>
-          <a href="https://www.instagram.com/meatup_jp/" class="btn-tertiary btn-vintage" target="_blank" rel="noopener noreferrer">InstagramのDMで相談</a>
         </div>
       </div>
     </section>
@@ -550,9 +539,10 @@
             </p>
           </details>
 
-          <details class="faq-item">
+          <details class="faq-item" open>
             <summary class="faq-q">貸切はできますか？</summary>
-            <p class="faq-a">はい、ご相談いただければ柔軟に対応いたします。人数や日時によって異なりますので、まずはお気軽にお電話またはInstagramのDMからお問い合わせください。</p>
+            <p class="faq-a">はい、ご相談いただければ柔軟に対応いたします。人数や日時によって異なりますので、まずはお気軽にお電話またはInstagramのDMからお問い合わせください。<br />
+            <a href="/party/#faq">宴会・貸切プランの詳細はこちら</a></p>
           </details>
 
           <details class="faq-item">
@@ -646,6 +636,8 @@
             class="access-exterior-img"
             src="img/access-exterior.jpg"
             alt="meat up 外観・看板"
+            width="4032"
+            height="3024"
             loading="lazy"
             decoding="async"
           />
