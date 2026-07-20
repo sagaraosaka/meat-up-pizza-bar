@@ -156,7 +156,7 @@
       </p>
 
       <div class="hero-cta hero-animate" data-delay="600">
-        <a href="https://tabelog.com/wakayama/A3001/A300101/30009101/" class="btn-primary btn-vintage" target="_blank" rel="noopener noreferrer">食べログで予約する</a>
+        <a href="https://tabelog.com/wakayama/A3001/A300101/30009101/" class="btn-primary btn-vintage" target="_blank" rel="noopener noreferrer" data-loc="hero">食べログで予約する</a>
         <p class="reserve-note">食べログの予約ページへ移動します</p>
         <a href="#pizza" class="btn-secondary btn-vintage">メニューを見る</a>
         <p class="hero-cta-note">予約なしでもOK・当日歓迎</p>
@@ -380,10 +380,10 @@
         </ul>
 
         <div class="party-cta-row">
-          <a href="/party/" class="btn-primary btn-vintage">二次会・宴会プランを見る</a>
-          <a href="/wedding-after-party/" class="btn-secondary btn-vintage">結婚式二次会について相談する</a>
-          <a href="tel:0734883455" class="btn-tertiary btn-vintage">電話で相談する</a>
-          <a href="https://www.instagram.com/meatup_jp/" class="btn-tertiary btn-vintage" target="_blank" rel="noopener noreferrer">InstagramのDMで相談</a>
+          <a href="/party/" class="btn-primary btn-vintage" data-button="party_page">二次会・宴会プランを見る</a>
+          <a href="/wedding-after-party/" class="btn-secondary btn-vintage" data-button="wedding_page">結婚式二次会について相談する</a>
+          <a href="tel:0734883455" class="btn-tertiary btn-vintage" data-loc="party_section">電話で相談する</a>
+          <a href="https://www.instagram.com/meatup_jp/" class="btn-tertiary btn-vintage" target="_blank" rel="noopener noreferrer" data-loc="party_section">InstagramのDMで相談</a>
         </div>
       </div>
     </section>
@@ -472,7 +472,7 @@
         <p class="cta-mid-sub">
           ふらっと来てもらえる気軽さが、このお店のスタイルです。<br />
           （金・土の夜は混みやすいため、予約がおすすめです）<br />
-          <a href="https://tabelog.com/wakayama/A3001/A300101/30009101/" target="_blank" rel="noopener noreferrer">食べログでご予約はこちら →</a>
+          <a href="https://tabelog.com/wakayama/A3001/A300101/30009101/" target="_blank" rel="noopener noreferrer" data-loc="cta_mid">食べログでご予約はこちら →</a>
         </p>
       </div>
     </section>
@@ -531,11 +531,11 @@
             <p class="faq-a">
               お問い合わせの内容に合わせてご利用ください。<br />
               ・通常のご来店・予約 →
-              <a href="https://tabelog.com/wakayama/A3001/A300101/30009101/" target="_blank" rel="noopener noreferrer">食べログ</a><br />
+              <a href="https://tabelog.com/wakayama/A3001/A300101/30009101/" target="_blank" rel="noopener noreferrer" data-loc="faq">食べログ</a><br />
               ・貸切・団体のご相談 → お電話
-              <a href="tel:0734883455">073-488-3455</a>
+              <a href="tel:0734883455" data-loc="faq">073-488-3455</a>
               またはInstagram DM
-              <a href="https://www.instagram.com/meatup_jp/" target="_blank" rel="noopener noreferrer">@meatup_jp</a>
+              <a href="https://www.instagram.com/meatup_jp/" target="_blank" rel="noopener noreferrer" data-loc="faq">@meatup_jp</a>
             </p>
           </details>
 
@@ -576,7 +576,7 @@
 
           <div class="shop-info-row">
             <dt>電話番号</dt>
-            <dd><a href="tel:0734883455">073-488-3455</a></dd>
+            <dd><a href="tel:0734883455" data-loc="shop_info">073-488-3455</a></dd>
           </div>
 
 
@@ -682,6 +682,7 @@
             class="sns-follow-btn"
             target="_blank"
             rel="noopener noreferrer"
+            data-loc="sns_section"
           >Follow on Instagram</a>
         </div>
       </div>
@@ -704,14 +705,15 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script src="js/analytics.js" defer></script>
 
   <!-- 固定フッターCTA（スマホのみ表示 追加 2026-03） -->
   <div class="fixed-cta" aria-label="予約・お電話">
     <p class="fixed-cta-note">予約なしでもOK</p>
     <div class="fixed-cta-buttons">
-      <a href="https://tabelog.com/wakayama/A3001/A300101/30009101/" class="fixed-cta-reserve" target="_blank" rel="noopener noreferrer">食べログで予約</a>
-      <a href="tel:0734883455" class="fixed-cta-tel">電話する</a>
-      <a href="/party/" class="fixed-cta-party">宴会</a>
+      <a href="https://tabelog.com/wakayama/A3001/A300101/30009101/" class="fixed-cta-reserve" target="_blank" rel="noopener noreferrer" data-loc="fixed_cta">食べログで予約</a>
+      <a href="tel:0734883455" class="fixed-cta-tel" data-loc="fixed_cta">電話する</a>
+      <a href="/party/" class="fixed-cta-party" data-button="fixed">宴会</a>
     </div>
   </div>
 </body>
