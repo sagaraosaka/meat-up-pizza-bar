@@ -1419,7 +1419,9 @@ hr {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 220px 160px;
+  grid-auto-rows: 160px;
   gap: 12px;
 }
 
@@ -1427,16 +1429,26 @@ hr {
   display: block;
 }
 
+.gallery-grid picture:first-child {
+  grid-column: 1 / -1;
+}
+
 @media (min-width: 768px) {
   .gallery-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, 120px);
     gap: 16px;
+  }
+
+  .gallery-grid picture:first-child {
+    grid-column: 1;
+    grid-row: 1 / span 3;
   }
 }
 
 .gallery-img {
   width: 100%;
-  height: 260px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -1449,12 +1461,6 @@ hr {
   filter: sepia(0.08) contrast(1.05) saturate(1.0) brightness(0.93);
 }
 
-@media (min-width: 768px) {
-  .gallery-img {
-    height: 360px;
-  }
-}
-
 .gallery-body {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 14px;
@@ -1463,6 +1469,24 @@ hr {
   letter-spacing: 0.03em;
   margin-top: 16px;
   text-align: left;
+}
+
+/* ===== 全幅写真帯（full-bleed） ===== */
+.full-bleed-band {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: 40vh;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+.full-bleed-band picture,
+.full-bleed-band img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 768px) {
