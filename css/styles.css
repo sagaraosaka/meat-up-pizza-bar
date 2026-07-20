@@ -733,10 +733,14 @@ body.nav-open .nav-toggle span:nth-child(3) {
   margin-left: 0.5rem;
 }
 
-.drink-tag.beer   { background: rgba(184, 149, 42, 0.15); color: var(--color-gold); border: 1px solid var(--color-gold); }
-.drink-tag.whisky { background: rgba(196, 120, 42, 0.12); color: var(--color-gold); border: 1px solid var(--color-accent); }
-.drink-tag.wine   { background: rgba(160, 80, 120, 0.15); color: #d48ab0; border: 1px solid #d48ab0; }
-.drink-tag.soft   { background: rgba(100, 200, 200, 0.1); color: #7ecece; border: 1px solid #7ecece; }
+.drink-tag.beer,
+.drink-tag.whisky,
+.drink-tag.wine,
+.drink-tag.soft {
+  background: rgba(184, 149, 42, 0.15);
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+}
 
 .drink-item p {
   color: var(--color-muted);
@@ -1190,7 +1194,7 @@ hr {
 .btn-primary {
   display: inline-block;
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-on-accent);
   font-family: var(--font-display);
   font-size: 1.15rem;
   letter-spacing: 0.18em;
@@ -1308,7 +1312,7 @@ hr {
   .fixed-cta-reserve {
     display: block;
     background: var(--color-accent);
-    color: #fff;
+    color: var(--color-on-accent);
     font-family: var(--font-display);
     font-size: 12px;
     text-align: center;
@@ -1549,7 +1553,7 @@ hr {
   line-height: 1;
   margin-bottom: 12px;
   letter-spacing: 0.02em;
-  color: var(--color-gold);
+  color: var(--color-accent);
 }
 
 .reason-title {
@@ -1770,7 +1774,7 @@ hr {
 .plan-price {
   font-family: var(--font-display);
   font-size: 2.2rem;
-  color: var(--color-gold);
+  color: var(--color-accent);
   line-height: 1.1;
   margin: 0 0 0.2rem;
 }
