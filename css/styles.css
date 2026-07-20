@@ -7,25 +7,26 @@
    ============================================ */
 :root {
   /* VINTAGE REDESIGN 新変数 */
-  --color-base: #362E2B;
+  --color-base: #241F1C;
   --color-sub: #D2B48C;
   --font-heading-en: 'Playfair Display', serif;
   --font-body-en: 'Noto Sans JP', sans-serif;
   --font-heading-ja: 'Hiragino Mincho ProN', 'Yu Mincho', serif;
   --font-body-ja: 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
 
-  /* 既存変数リマップ */
-  --color-bg: #362E2B;
-  --color-bg-section: #3D3330;
-  --color-card: #2E2724;
+  /* 既存変数リマップ（ミッドナイトイエロー配色） */
+  --color-bg: #241F1C;
+  --color-bg-section: #2B2522;
+  --color-card: #1E1A17;
   --color-text: #F5DEB3;
   --color-muted: #C4A882;
-  --color-border: #4A3C35;
-  --color-accent: #B22222;
-  --color-accent-dark: #8B1A1A;
-  --color-gold: #D2B48C;
-  --color-accent-soft: rgba(178, 34, 34, 0.12);
+  --color-border: #453B33;
   --color-logo-yellow: #FDB300; /* logo.pngからサンプリングした実測値 */
+  --color-accent: var(--color-logo-yellow);
+  --color-on-accent: #1D1F23; /* logo.pngの濃色部分からサンプリングした実測値。黄地の上の文字色 */
+  --color-accent-dark: #B37D00;
+  --color-gold: #D2B48C;
+  --color-accent-soft: rgba(253, 179, 0, 0.12);
 
   /* typography */
   --font-display: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
@@ -49,7 +50,7 @@
   --radius-md: 4px;
   --radius-lg: 8px;
   --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-glow: 0 8px 32px rgba(178, 34, 34, 0.22);
+  --shadow-glow: 0 8px 32px rgba(253, 179, 0, 0.22);
   --transition-fast: 0.2s ease-out;
 }
 
@@ -254,7 +255,7 @@ section::before {
 
 /* スクロール後の固定背景 */
 .site-header.is-scrolled {
-  background: rgba(13, 13, 13, 0.95);
+  background: rgba(30, 26, 23, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--color-border);
@@ -342,7 +343,7 @@ section::before {
   padding: 4.5rem 1.5rem 2rem;
   gap: var(--space-sm);
 
-  background: rgba(13, 13, 13, 0.97);
+  background: rgba(30, 26, 23, 0.97);
   font-size: 1rem;
   text-align: left;
 
@@ -574,7 +575,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   font-family: var(--font-display);
   font-size: 1.1rem;
   letter-spacing: 0.1em;
-  color: #0A0908;
+  color: var(--color-on-accent);
   background: var(--color-gold);
   padding: 0.3rem 0.9rem;
   border-radius: 0;
@@ -908,7 +909,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 footer {
   border-top: 1px solid var(--color-border);
   padding: var(--space-md) 0;
-  background-color: #0a0908;
+  background-color: var(--color-card);
 }
 
 .footer-inner {
@@ -1182,8 +1183,8 @@ hr {
 }
 
 @keyframes reserve-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(178, 34, 34, 0); }
-  50%       { box-shadow: 0 0 18px 4px rgba(178, 34, 34, 0.55); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(253, 179, 0, 0); }
+  50%       { box-shadow: 0 0 18px 4px rgba(253, 179, 0, 0.4); }
 }
 
 .btn-primary {
@@ -1283,7 +1284,7 @@ hr {
     left: 0;
     right: 0;
     z-index: 9999;
-    background: rgba(10, 9, 8, 0.97);
+    background: rgba(30, 26, 23, 0.97);
     padding: 10px 16px;
     padding-bottom: calc(10px + env(safe-area-inset-bottom));
     border-top: 1px solid var(--color-border);
