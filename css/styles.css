@@ -392,7 +392,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
 .global-nav a:hover {
   opacity: 1;
-  color: var(--color-accent);
+  color: var(--color-gold);
   text-decoration: none;
 }
 
@@ -475,7 +475,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-gold);
   margin-bottom: 0.75rem;
   font-weight: 500;
   display: inline-block;
@@ -504,7 +504,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 }
 
 .hero-accent {
-  color: var(--color-accent);
+  color: var(--color-gold);
   position: relative;
 }
 
@@ -671,7 +671,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   font-family: var(--font-display);
   font-size: 1.4rem;
   letter-spacing: 0.05em;
-  color: var(--color-accent);
+  color: var(--color-gold);
   margin-bottom: 0.2rem;
   line-height: 1;
   transition: letter-spacing 0.3s ease;
@@ -733,7 +733,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 }
 
 .drink-tag.beer   { background: rgba(184, 149, 42, 0.15); color: var(--color-gold); border: 1px solid var(--color-gold); }
-.drink-tag.whisky { background: rgba(196, 120, 42, 0.12); color: var(--color-accent); border: 1px solid var(--color-accent); }
+.drink-tag.whisky { background: rgba(196, 120, 42, 0.12); color: var(--color-gold); border: 1px solid var(--color-accent); }
 .drink-tag.wine   { background: rgba(160, 80, 120, 0.15); color: #d48ab0; border: 1px solid #d48ab0; }
 .drink-tag.soft   { background: rgba(100, 200, 200, 0.1); color: #7ecece; border: 1px solid #7ecece; }
 
@@ -747,7 +747,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   font-family: var(--font-display);
   font-size: 1.2rem;
   letter-spacing: 0.05em;
-  color: var(--color-accent);
+  color: var(--color-gold);
 }
 
 /* =========================
@@ -802,7 +802,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-gold);
   margin-bottom: 0.25rem;
 }
 
@@ -836,7 +836,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 
 .map-link a {
   font-size: 0.9rem;
-  color: var(--color-accent);
+  color: var(--color-text);
   font-weight: 500;
 }
 
@@ -995,7 +995,7 @@ hr {
   font-family: var(--font-heading-en);
   font-size: 1.8em;
   font-weight: 900;
-  color: var(--color-accent);
+  color: var(--color-gold);
 }
 
 /* =========================
@@ -1207,7 +1207,7 @@ hr {
 
 .btn-primary:hover {
   background: transparent;
-  color: var(--color-accent);
+  color: var(--color-gold);
   text-decoration: none;
   animation: none;
   box-shadow: none;
@@ -1548,7 +1548,7 @@ hr {
   line-height: 1;
   margin-bottom: 12px;
   letter-spacing: 0.02em;
-  color: var(--color-accent);
+  color: var(--color-gold);
 }
 
 .reason-title {
@@ -1613,7 +1613,7 @@ hr {
   font-size: 40px;
   letter-spacing: 0.02em;
   line-height: 1;
-  color: var(--color-accent);
+  color: var(--color-gold);
 }
 
 .lunch-note {
@@ -1630,7 +1630,7 @@ hr {
 
 /* ===== ABOUTアクセント強調（追加 2026-05）===== */
 .about-accent {
-  color: var(--color-accent);
+  color: var(--color-gold);
   font-weight: 700;
 }
 /* ===== /ABOUTアクセント強調 ===== */
@@ -1769,7 +1769,7 @@ hr {
 .plan-price {
   font-family: var(--font-display);
   font-size: 2.2rem;
-  color: var(--color-accent);
+  color: var(--color-gold);
   line-height: 1.1;
   margin: 0 0 0.2rem;
 }
@@ -1849,7 +1849,7 @@ hr {
 .capacity-num {
   font-family: var(--font-display);
   font-size: 2.4rem;
-  color: var(--color-accent);
+  color: var(--color-gold);
   line-height: 1.1;
   margin: 0;
 }
@@ -1882,7 +1882,7 @@ hr {
   top: 0;
   font-family: var(--font-display);
   font-size: 1.5rem;
-  color: var(--color-accent);
+  color: var(--color-gold);
   border: 1px solid var(--color-accent);
   width: 2.4rem;
   height: 2.4rem;
