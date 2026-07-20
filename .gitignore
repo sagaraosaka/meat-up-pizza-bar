@@ -1,5 +1,6 @@
 .company/
 node_modules/
+CLAUDE.md
 
 # OS generated files
 .DS_Store
