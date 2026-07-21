@@ -1866,7 +1866,7 @@ hr {
 }
 
 @media (min-width: 768px) {
-  .capacity-grid { grid-template-columns: repeat(3, 1fr); }
+  .capacity-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
 }
 
 .capacity-card {
