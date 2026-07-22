@@ -409,7 +409,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   display: flex;
   align-items: center;
   overflow: hidden;
-  isolation: isolate;
+  z-index: 1;
 }
 
 .hero-bg {
@@ -1690,7 +1690,7 @@ hr {
   align-items: center;
   color: #ffffff;
   overflow: hidden;
-  isolation: isolate;
+  z-index: 1;
   padding: var(--space-lg) 0;
 }
 
