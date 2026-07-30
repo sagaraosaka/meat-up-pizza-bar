@@ -1598,66 +1598,6 @@ hr {
 }
 /* ===== /選ばれる理由セクション ===== */
 
-/* ===== ランチセクション（追加 2025）===== */
-.lunch-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 28px;
-  max-width: 640px;
-  margin: 0 0 32px 0;
-}
-
-@media (min-width: 768px) {
-  .lunch-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.lunch-card {
-  border: 1px solid var(--color-border);
-  border-radius: 0;
-  padding: 32px 24px;
-  text-align: left;
-  background: var(--color-card);
-}
-
-.lunch-name {
-  font-family: var(--font-display);
-  font-size: 1rem;
-  letter-spacing: 0.15em;
-  margin-bottom: 12px;
-  opacity: 0.7;
-  text-transform: uppercase;
-}
-
-.lunch-contents {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 13px;
-  line-height: 1.85;
-  opacity: 0.75;
-  margin-bottom: 16px;
-}
-
-.lunch-price {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 40px;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  color: var(--color-gold);
-}
-
-.lunch-note {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 12px;
-  line-height: 1.9;
-  opacity: 0.6;
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto;
-  letter-spacing: 0.03em;
-}
-/* ===== /ランチセクション ===== */
-
 /* ===== ABOUTアクセント強調（追加 2026-05）===== */
 .about-accent {
   color: var(--color-gold);
