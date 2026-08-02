@@ -485,7 +485,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
   text-transform: uppercase;
   color: var(--color-gold);
   margin-bottom: 0.75rem;
-  font-weight: 500;
+  font-weight: 400;
   display: inline-block;
   align-self: flex-start;
   border: 1px solid var(--color-accent);
@@ -851,7 +851,7 @@ body.nav-open .nav-toggle span:nth-child(3) {
 .map-link a {
   font-size: 0.9rem;
   color: var(--color-text);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .map-link a:hover {
@@ -1395,7 +1395,7 @@ hr {
   top: 50%;
   transform: translateY(-50%);
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   font-family: var(--font-body);
   transition: transform 0.2s;
 }
