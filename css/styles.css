@@ -430,7 +430,14 @@ body.nav-open .nav-toggle span:nth-child(3) {
 }
 
 @media (max-width: 767px) {
-  .hero-bg { animation: none; }
+  .hero-bg {
+    animation: none;
+    background-image: url("../img/hero-bar-counter-800.jpg");
+    background-image: image-set(
+      url("../img/hero-bar-counter-800.webp") type("image/webp"),
+      url("../img/hero-bar-counter-800.jpg") type("image/jpeg")
+    );
+  }
 }
 
 @keyframes heroZoom {
