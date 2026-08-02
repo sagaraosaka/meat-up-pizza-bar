@@ -1,9 +1,15 @@
 .company/
 node_modules/
 CLAUDE.md
-scripts/
+scripts/*.csv
 screenshots/
 screenshots-v2/
+
+# GSC credentials (never commit)
+*.json
+!package.json
+!package-lock.json
+!.github/**/*.json
 
 # OS generated files
 .DS_Store
