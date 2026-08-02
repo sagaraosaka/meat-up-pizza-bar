@@ -50,12 +50,23 @@
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
+    "@id": "https://meatupwakayama.com/#restaurant",
     "name": "meatup ~ eating house ~",
+    "alternateName": ["ミートアップ", "ミート アップ", "meatup"],
     "url": "https://meatupwakayama.com/",
-    "image": "https://meatupwakayama.com/img/hero-signage-og.jpg",
-    "telephone": "073-488-3455",
-    "priceRange": "¥",
+    "image": [
+      "https://meatupwakayama.com/img/hero-signage-og.jpg",
+      "https://meatupwakayama.com/img/gallery-backbar.jpg",
+      "https://meatupwakayama.com/img/pizza-margherita-new.jpg"
+    ],
+    "telephone": "+81-73-488-3455",
+    "priceRange": "¥1,000〜¥1,999",
     "servesCuisine": ["Pizza", "Italian"],
+    "acceptsReservations": "https://tabelog.com/wakayama/A3001/A300101/30009101/",
+    "hasMenu": "https://meatupwakayama.com/#pizza",
+    "smokingAllowed": true,
+    "paymentAccepted": "現金, クレジットカード, QRコード決済",
+    "currenciesAccepted": "JPY",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "本町2-44 松風ビル 1F",
@@ -74,7 +85,7 @@
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Tuesday","Wednesday","Thursday"],
         "opens": "18:00",
-        "closes": "00:00"
+        "closes": "23:59"
       },
       {
         "@type": "OpeningHoursSpecification",
@@ -144,7 +155,7 @@
       <p class="hero-lead hero-animate" data-delay="480">
         直径23センチ、本格ピザ。¥500〜、金・土は深夜26時まで。
       </p>
-      <p class="hero-lead-en hero-animate" data-delay="480">
+      <p class="hero-lead-en hero-animate" data-delay="480" lang="en">
         Authentic pizza from ¥500 (tax incl. ¥550). Open until 2 AM on Fri &amp; Sat.
       </p>
 
@@ -250,7 +261,7 @@
               </figure>
               <div class="menu-body">
                 <p class="menu-price price-highlight">¥500（税込¥550）</p>
-                <h4 class="menu-name">マルゲリータピザ</h4>
+                <h3 class="menu-name">マルゲリータピザ</h3>
                 <p class="menu-desc">
                   トマトソースとモッツァレラ、バジルの定番ピザ。迷ったらまずはこれ。ビールにもワインにもよく合います。
                 </p>
@@ -266,7 +277,7 @@
               </figure>
               <div class="menu-body">
                 <p class="menu-price price-highlight">¥500（税込¥550）</p>
-                <h4 class="menu-name">てりやきチキンのピザ</h4>
+                <h3 class="menu-name">てりやきチキンのピザ</h3>
                 <p class="menu-desc">
                   甘辛いてりやきソースに、チキンとマヨネーズ。香ばしい香りで、ハイボールやビールが進む一枚です。
                 </p>
@@ -282,7 +293,7 @@
               </figure>
               <div class="menu-body">
                 <p class="menu-price price-highlight">¥500（税込¥550）</p>
-                <h4 class="menu-name">クアトロフォルマッジ</h4>
+                <h3 class="menu-name">クアトロフォルマッジ</h3>
                 <p class="menu-desc">
                   4種のチーズをのせた、塩気とコクのあるピザ。はちみつをかけて、ワインと一緒にどうぞ。
                 </p>
@@ -306,7 +317,7 @@
           <div class="gallery-grid">
             <picture>
               <source srcset="img/gallery-staff.webp" type="image/webp" />
-              <img src="img/gallery-staff.jpg" alt="meat upのスタッフと店内の雰囲気" class="gallery-img" width="1179" height="781" loading="lazy" decoding="async" />
+              <img src="img/gallery-staff.jpg" alt="meatup ~ eating house ~ のスタッフと店内の雰囲気" class="gallery-img" width="1179" height="781" loading="lazy" decoding="async" />
             </picture>
             <picture>
               <source srcset="img/hero-bar-counter.webp" type="image/webp" />
@@ -569,7 +580,7 @@
             <dt>住所</dt>
             <dd>
               〒640-8033 和歌山県和歌山市本町2-44 松風ビル 1F<br />
-              <span class="shop-info-en">2-44 Honmachi, Wakayama City, Wakayama 640-8033 (Matsukaze Bldg. 1F)</span>
+              <span class="shop-info-en" lang="en">2-44 Honmachi, Wakayama City, Wakayama 640-8033 (Matsukaze Bldg. 1F)</span>
             </dd>
           </div>
 
@@ -584,7 +595,7 @@
             <dd>
               火〜木 18:00〜24:00<br />
               金・土 18:00〜26:00<br />
-              <span class="shop-info-en">Tue–Thu 18:00–24:00, Fri–Sat 18:00–26:00</span>
+              <span class="shop-info-en" lang="en">Tue–Thu 18:00–24:00, Fri–Sat 18:00–26:00</span>
             </dd>
           </div>
 
@@ -624,7 +635,7 @@
         <p class="section-keyword">和歌山市本町2-44 松風ビル1F</p>
         <p class="section-lead">
           アパホテル和歌山様から徒歩1分（72m）。本町通り沿い、フォルテワジマの向かいにあります。<br />
-          <span class="shop-info-en">1 min. walk from APA Hotel Wakayama. On Honmachi-dori, across from Forte Wajima.</span>
+          <span class="shop-info-en" lang="en">1 min. walk from APA Hotel Wakayama. On Honmachi-dori, across from Forte Wajima.</span>
         </p>
 
         <picture>
@@ -632,7 +643,7 @@
           <img
             class="access-exterior-img"
             src="img/access-exterior.jpg"
-            alt="meat up 外観・看板"
+            alt="meatup ~ eating house ~ の外観と看板"
             width="4032"
             height="3024"
             loading="lazy"
@@ -641,7 +652,7 @@
         </picture>
 
         <div class="map-wrapper">
-          <!-- TODO: Googleビジネスプロフィールで店名を「meat up」に修正後、埋め込みコードを再取得して差し替え -->
+          <!-- TODO: Googleビジネスプロフィールで店名を「meatup ~ eating house ~」に修正後、埋め込みコードを再取得して差し替え -->
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1649.2717859119773!2d135.17484070628643!3d34.234670904688834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000b33a3b357e3d%3A0x683fbe6f8924aa38!2smeatup%20~%20eating%20house%20~!5e0!3m2!1sja!2sjp!4v1768214010497!5m2!1sja!2sjp"
             width="100%"
