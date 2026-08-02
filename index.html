@@ -26,7 +26,8 @@
     <link rel="icon" href="favicon.ico">
 
   <!-- ヒーロー背景画像の優先読み込み（LCP対策） -->
-  <link rel="preload" as="image" href="/img/hero-bar-counter.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/img/hero-bar-counter-800.webp" type="image/webp" fetchpriority="high" media="(max-width: 767px)">
+  <link rel="preload" as="image" href="/img/hero-bar-counter.webp" type="image/webp" fetchpriority="high" media="(min-width: 768px)">
 
   <!-- 後でCSSファイルを読み込む想定 -->
   <link rel="stylesheet" href="css/styles.css" />
@@ -231,8 +232,19 @@
 
     <div class="full-bleed-band">
       <picture>
-        <source srcset="img/gallery-backbar.webp" type="image/webp" />
-        <img src="img/gallery-backbar.jpg" alt="バックバーに並ぶボトル棚" width="4032" height="3024" loading="lazy" decoding="async" />
+        <source
+          srcset="img/gallery-backbar-800.webp 800w,
+                  img/gallery-backbar-1600.webp 1600w"
+          sizes="100vw"
+          type="image/webp" />
+        <img
+          src="img/gallery-backbar-800.jpg"
+          srcset="img/gallery-backbar-800.jpg 800w,
+                  img/gallery-backbar-1600.jpg 1600w"
+          sizes="100vw"
+          alt="バックバーに並ぶボトル棚"
+          width="1600" height="1200"
+          loading="lazy" decoding="async" />
       </picture>
     </div>
 
@@ -255,8 +267,19 @@
             <article class="menu-item">
               <figure class="menu-thumb">
                 <picture>
-                  <source srcset="img/pizza-margherita-new.webp" type="image/webp" />
-                  <img src="img/pizza-margherita-new.jpg" alt="マルゲリータのピザ" width="3024" height="4032" loading="lazy" decoding="async" />
+                  <source
+                    srcset="img/pizza-margherita-new-800.webp 800w,
+                            img/pizza-margherita-new-1600.webp 1600w"
+                    sizes="(min-width: 768px) 200px, calc(100vw - 32px)"
+                    type="image/webp" />
+                  <img
+                    src="img/pizza-margherita-new-800.jpg"
+                    srcset="img/pizza-margherita-new-800.jpg 800w,
+                            img/pizza-margherita-new-1600.jpg 1600w"
+                    sizes="(min-width: 768px) 200px, calc(100vw - 32px)"
+                    alt="マルゲリータのピザ"
+                    width="1600" height="2133"
+                    loading="lazy" decoding="async" />
                 </picture>
               </figure>
               <div class="menu-body">
@@ -271,8 +294,19 @@
             <article class="menu-item">
               <figure class="menu-thumb">
                 <picture>
-                  <source srcset="img/pizza-teriyaki-chicken.webp" type="image/webp" />
-                  <img src="img/pizza-teriyaki-chicken.jpg" alt="てりやきチキンのピザ" width="3936" height="2624" loading="lazy" decoding="async" />
+                  <source
+                    srcset="img/pizza-teriyaki-chicken-800.webp 800w,
+                            img/pizza-teriyaki-chicken-1600.webp 1600w"
+                    sizes="(min-width: 768px) 200px, calc(100vw - 32px)"
+                    type="image/webp" />
+                  <img
+                    src="img/pizza-teriyaki-chicken-800.jpg"
+                    srcset="img/pizza-teriyaki-chicken-800.jpg 800w,
+                            img/pizza-teriyaki-chicken-1600.jpg 1600w"
+                    sizes="(min-width: 768px) 200px, calc(100vw - 32px)"
+                    alt="てりやきチキンのピザ"
+                    width="1600" height="1066"
+                    loading="lazy" decoding="async" />
                 </picture>
               </figure>
               <div class="menu-body">
@@ -287,8 +321,19 @@
             <article class="menu-item">
               <figure class="menu-thumb">
                 <picture>
-                  <source srcset="img/pizza-quattro-formaggi.webp" type="image/webp" />
-                  <img src="img/pizza-quattro-formaggi.jpg" alt="クアトロフォルマッジのピザ" width="6000" height="4000" loading="lazy" decoding="async" />
+                  <source
+                    srcset="img/pizza-quattro-formaggi-800.webp 800w,
+                            img/pizza-quattro-formaggi-1600.webp 1600w"
+                    sizes="(min-width: 768px) 200px, calc(100vw - 32px)"
+                    type="image/webp" />
+                  <img
+                    src="img/pizza-quattro-formaggi-800.jpg"
+                    srcset="img/pizza-quattro-formaggi-800.jpg 800w,
+                            img/pizza-quattro-formaggi-1600.jpg 1600w"
+                    sizes="(min-width: 768px) 200px, calc(100vw - 32px)"
+                    alt="クアトロフォルマッジのピザ"
+                    width="1600" height="1066"
+                    loading="lazy" decoding="async" />
                 </picture>
               </figure>
               <div class="menu-body">
@@ -316,20 +361,66 @@
         <div class="gallery-inner">
           <div class="gallery-grid">
             <picture>
-              <source srcset="img/gallery-staff.webp" type="image/webp" />
-              <img src="img/gallery-staff.jpg" alt="meatup ~ eating house ~ のスタッフと店内の雰囲気" class="gallery-img" width="1179" height="781" loading="lazy" decoding="async" />
+              <source
+                srcset="img/gallery-staff-800.webp 800w"
+                sizes="(min-width: 768px) 608px, 100vw"
+                type="image/webp" />
+              <img
+                src="img/gallery-staff-800.jpg"
+                srcset="img/gallery-staff-800.jpg 800w"
+                sizes="(min-width: 768px) 608px, 100vw"
+                alt="meatup ~ eating house ~ のスタッフと店内の雰囲気"
+                class="gallery-img"
+                width="800" height="530"
+                loading="lazy" decoding="async" />
             </picture>
             <picture>
-              <source srcset="img/hero-bar-counter.webp" type="image/webp" />
-              <img src="img/hero-bar-counter.jpg" alt="カウンター席と酒棚" class="gallery-img" width="4032" height="3024" loading="lazy" decoding="async" />
+              <source
+                srcset="img/hero-bar-counter-800.webp 800w,
+                        img/hero-bar-counter-1600.webp 1600w"
+                sizes="(min-width: 768px) 304px, 50vw"
+                type="image/webp" />
+              <img
+                src="img/hero-bar-counter-800.jpg"
+                srcset="img/hero-bar-counter-800.jpg 800w,
+                        img/hero-bar-counter-1600.jpg 1600w"
+                sizes="(min-width: 768px) 304px, 50vw"
+                alt="カウンター席と酒棚"
+                class="gallery-img"
+                width="1600" height="1200"
+                loading="lazy" decoding="async" />
             </picture>
             <picture>
-              <source srcset="img/gallery-table.webp" type="image/webp" />
-              <img src="img/gallery-table.jpg" alt="テーブル席の様子" class="gallery-img" width="4032" height="3024" loading="lazy" decoding="async" />
+              <source
+                srcset="img/gallery-table-800.webp 800w,
+                        img/gallery-table-1600.webp 1600w"
+                sizes="(min-width: 768px) 304px, 50vw"
+                type="image/webp" />
+              <img
+                src="img/gallery-table-800.jpg"
+                srcset="img/gallery-table-800.jpg 800w,
+                        img/gallery-table-1600.jpg 1600w"
+                sizes="(min-width: 768px) 304px, 50vw"
+                alt="テーブル席の様子"
+                class="gallery-img"
+                width="1600" height="1200"
+                loading="lazy" decoding="async" />
             </picture>
             <picture>
-              <source srcset="img/gallery-backbar.webp" type="image/webp" />
-              <img src="img/gallery-backbar.jpg" alt="バックバー正面" class="gallery-img" width="4032" height="3024" loading="lazy" decoding="async" />
+              <source
+                srcset="img/gallery-backbar-800.webp 800w,
+                        img/gallery-backbar-1600.webp 1600w"
+                sizes="(min-width: 768px) 304px, 50vw"
+                type="image/webp" />
+              <img
+                src="img/gallery-backbar-800.jpg"
+                srcset="img/gallery-backbar-800.jpg 800w,
+                        img/gallery-backbar-1600.jpg 1600w"
+                sizes="(min-width: 768px) 304px, 50vw"
+                alt="バックバー正面"
+                class="gallery-img"
+                width="1600" height="1200"
+                loading="lazy" decoding="async" />
             </picture>
           </div>
           <p class="gallery-body">
@@ -342,8 +433,19 @@
 
     <div class="full-bleed-band">
       <picture>
-        <source srcset="img/gallery-table.webp" type="image/webp" />
-        <img src="img/gallery-table.jpg" alt="テーブル席の様子" width="4032" height="3024" loading="lazy" decoding="async" />
+        <source
+          srcset="img/gallery-table-800.webp 800w,
+                  img/gallery-table-1600.webp 1600w"
+          sizes="100vw"
+          type="image/webp" />
+        <img
+          src="img/gallery-table-800.jpg"
+          srcset="img/gallery-table-800.jpg 800w,
+                  img/gallery-table-1600.jpg 1600w"
+          sizes="100vw"
+          alt="テーブル席の様子"
+          width="1600" height="1200"
+          loading="lazy" decoding="async" />
       </picture>
     </div>
 
@@ -639,13 +741,20 @@
         </p>
 
         <picture>
-          <source srcset="img/access-exterior.webp" type="image/webp" />
+          <source
+            srcset="img/access-exterior-800.webp 800w,
+                    img/access-exterior-1600.webp 1600w"
+            sizes="(min-width: 992px) 928px, calc(100vw - 32px)"
+            type="image/webp" />
           <img
             class="access-exterior-img"
-            src="img/access-exterior.jpg"
+            src="img/access-exterior-800.jpg"
+            srcset="img/access-exterior-800.jpg 800w,
+                    img/access-exterior-1600.jpg 1600w"
+            sizes="(min-width: 992px) 928px, calc(100vw - 32px)"
             alt="meatup ~ eating house ~ の外観と看板"
-            width="4032"
-            height="3024"
+            width="1600"
+            height="1200"
             loading="lazy"
             decoding="async"
           />
