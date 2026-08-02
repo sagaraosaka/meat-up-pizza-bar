@@ -5,6 +5,9 @@ scripts/*.csv
 screenshots/
 screenshots-v2/
 
+# GSC出力データ（GitHub Pagesの公開対象外に置く。Actions artifact/非公開ストレージで管理する）
+data/
+
 # GSC credentials (never commit)
 *.json
 !package.json

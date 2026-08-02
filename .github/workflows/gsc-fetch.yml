@@ -7,7 +7,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   fetch-gsc-data:
@@ -29,14 +29,11 @@ jobs:
           GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
         run: python scripts/fetch_gsc_queries.py
 
-      - name: Commit and push CSV
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/*.csv
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "chore: GSCクエリデータを自動取得 ($(date +'%Y-%m-%d'))"
-            git push
-          fi
+      # data/ はリポジトリ管理下に置かない（GitHub Pagesの公開対象になるため）。
+      # 取得結果はActions artifactとしてのみ保存し、非公開で確認する。
+      - name: Upload CSV as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gsc-query-data
+          path: data/*.csv
+          retention-days: 90
