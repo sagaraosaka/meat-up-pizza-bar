@@ -1,0 +1,7 @@
+exclude:
+  - .company/
+  - CLAUDE.md
+  - scripts/
+  - data/
+  - requirements.txt
+  - .github/
