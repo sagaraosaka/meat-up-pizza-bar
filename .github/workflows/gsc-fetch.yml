@@ -1,0 +1,39 @@
+name: Fetch GSC Query Data
+
+on:
+  schedule:
+    # 毎週月曜 9:00 JST = 毎週月曜 0:00 UTC
+    - cron: "0 0 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  fetch-gsc-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch GSC query data
+        env:
+          GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
+        run: python scripts/fetch_gsc_queries.py
+
+      # data/ はリポジトリ管理下に置かない（GitHub Pagesの公開対象になるため）。
+      # 取得結果はActions artifactとしてのみ保存し、非公開で確認する。
+      - name: Upload CSV as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gsc-query-data
+          path: data/*.csv
+          retention-days: 90

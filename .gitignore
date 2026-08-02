@@ -1,9 +1,18 @@
 .company/
 node_modules/
 CLAUDE.md
-scripts/
+scripts/*.csv
 screenshots/
 screenshots-v2/
+
+# GSC出力データ（GitHub Pagesの公開対象外に置く。Actions artifact/非公開ストレージで管理する）
+data/
+
+# GSC credentials (never commit)
+*.json
+!package.json
+!package-lock.json
+!.github/**/*.json
 
 # OS generated files
 .DS_Store
