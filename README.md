@@ -1,7 +1,7 @@
 # Meat Up Wakayama Official Site
 
-和歌山市本町のピザバー「Meat Up（ミートアップ）」の公式シングルページサイトです。  
-500円（税込550円）ピザ、ディナー営業、予約導線、店舗情報、アクセスを1ページで確認できる構成にしています。
+和歌山市本町のピザバー「Meat Up（ミートアップ）」の公式サイトです。  
+500円（税込550円）ピザ、ディナー営業、予約導線、店舗情報、アクセスを確認できる、トップ・パーティー（`/party/`）・結婚式二次会（`/wedding-after-party/`）の3ページ構成にしています。
 
 ## 公開URL
 
@@ -35,11 +35,24 @@
 ```txt
 .
 ├─ index.html
+├─ party/
+│   └─ index.html
+├─ wedding-after-party/
+│   └─ index.html
 ├─ CNAME
+├─ sitemap.xml
+├─ robots.txt
+├─ favicon.ico
 ├─ css/
-│   └─ styles.css
+│   ├─ styles.css
+│   └─ styles.min.css
 ├─ js/
+│   ├─ analytics.js
 │   └─ main.js
+├─ scripts/
+│   ├─ fetch_gsc_queries.py
+│   ├─ requirements.txt
+│   └─ screenshot.mjs
 └─ img/
     ├─ hero-*.jpg / hero-*.webp
     ├─ pizza-*.jpg / pizza-*.webp
@@ -58,7 +71,8 @@
 1. `index.html` で店舗情報、メニュー、FAQ、予約リンクなどを更新します。
 2. 見た目を調整する場合は `css/styles.css` を更新します。
 3. 動きの変更が必要な場合は `js/main.js` を更新します。
-4. 変更後はローカルで差分を確認し、問題なければコミットして `main` にpushします。
+4. `feature/説明` 形式のブランチを切り、変更後はローカルで差分を確認して問題なければコミットします。
+5. ブランチをpushしてPRを作成し、PR経由で `main` にマージします（`main` への直接コミット・pushはしません）。
 
 ## 画像追加ルール
 
