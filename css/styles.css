@@ -1318,6 +1318,10 @@ hr {
     gap: 6px;
   }
 
+  .fixed-cta-buttons > :only-child {
+    grid-column: 1 / -1;
+  }
+
   .fixed-cta-reserve {
     display: block;
     background: var(--color-accent);
