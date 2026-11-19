@@ -376,6 +376,57 @@ body.nav-open .nav-toggle span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
 
+/* モバイル：メニューを開いたとき「閉じる」を見せ、CTAより前面に出す */
+@media (max-width: 767.98px) {
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  /* ヘッダーを含む #hero / .page-hero を .fixed-cta (z-index:9999) より前面に */
+  body.nav-open #hero,
+  body.nav-open .page-hero {
+    z-index: 10000;
+  }
+
+  /* backdrop-filter は fixed 子要素の包含ブロックを作るため開いている間は外す */
+  body.nav-open .site-header {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  /* ロゴとトグルを全画面ナビ(z-index:20)より前面に */
+  .logo-area,
+  .nav-toggle {
+    position: relative;
+    z-index: 21;
+  }
+
+  /* タップ領域を見た目を変えずに44pxへ拡大 */
+  .nav-toggle::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+  }
+
+  body.nav-open .nav-toggle::after {
+    content: "閉じる";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 6px;
+    white-space: nowrap;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    color: var(--color-text);
+  }
+}
+
 .global-nav a {
   display: block;
   width: 100%;
